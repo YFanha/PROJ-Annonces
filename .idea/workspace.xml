@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d5b481b-869b-4c02-8be0-5b77e66a5111" name="Default Changelist" comment="" />
+    <list default="true" id="8d5b481b-869b-4c02-8be0-5b77e66a5111" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Documentation/Scénario inscription.xlsx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
