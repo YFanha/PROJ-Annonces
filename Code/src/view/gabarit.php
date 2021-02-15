@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="view/content/css/all.min.css" />
     <link rel="stylesheet" href="view/content/css/bootstrap.min.css" />
     <link rel="stylesheet" href="view/content/css/templatemo-style.css" />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="view/content/Style/formStyle.css" />
 </head>
 <body>
 <div class="row tm-brand-row">

@@ -1,0 +1,23 @@
+/* ----- Login -------*/
+
+#loginForm{
+    display: block;
+    margin: 5% auto 10% auto;
+}
+
+#loginForm .btn{
+    margin-top: 10px;
+}
+
+#btnSubmit{
+    margin: 5px;
+    width: 100%;
+}
+
+
+.form:first-child{
+    margin-top: 10px;
+}
+.form:nth-child(2){
+    margin-bottom: 10px;
+}
