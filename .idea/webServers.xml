@@ -5,6 +5,9 @@
       <webServer id="fcb9e3dd-01c2-4b1c-a26b-09d993449393" name="sa" url="http://localhost:888">
         <fileTransfer mountedRoot="C:\Users\Sven.VOLERY\Documents\GitHub\PROJ-Annonces\Code" accessType="MOUNT" port="0" />
       </webServer>
+      <webServer id="983f3b74-b0a6-4110-8aa6-16a4e82a876d" name="sven" url="http://localhost:888">
+        <fileTransfer mountedRoot="C:\Users\Sven.VOLERY\Documents\GitHub\PROJ-Annonces\Code" accessType="MOUNT" port="0" />
+      </webServer>
     </option>
   </component>
 </project>
