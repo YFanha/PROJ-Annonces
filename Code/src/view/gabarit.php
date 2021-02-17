@@ -28,17 +28,19 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="view/content/Style/formStyle.css" />
+
+
 </head>
 <body>
-<div class="row tm-brand-row">
+<div class="row tm-brand-rowl bg-yellow">
     <div class="col-lg-4 col-10">
         <div class="tm-brand-container">
             <div class="tm-brand-texts">
-                <h1 class="text-uppercase tm-brand-name">Next Level</h1>
+                <h1 class="text-uppercase tm-brand-name">Web annonces</h1>
             </div>
         </div>
     </div>
-    <div class="col-lg-8 col-2 tm-nav-col">
+    <div class="col-lg-8 col-2 tm-nav-col bg-yellow">
         <div class="tm-nav">
             <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
                 <button
