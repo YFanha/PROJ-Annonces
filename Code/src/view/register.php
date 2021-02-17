@@ -19,9 +19,9 @@ ob_start();
     <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(view/content/images/home_slide_2.jpg);"></section>
 
     <!--   <section class="login_part padding_top">-->
-    <section class="bgwhite p-t-66 p-b-60">
+    <section class="bgwhite p-t-66 p-b-60 bg-yellow">
 
-        <div class="container-fluid">
+        <div class="container bg-dark">
             <div class="row align-items-center">
 
                 <div class="col-lg-6 col-md-6 bg-light">
