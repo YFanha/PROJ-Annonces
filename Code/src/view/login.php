@@ -10,20 +10,20 @@
  *
  */
 
-$title = 'Login/Logout';
+$title = 'Connectez-vous';
 
 ob_start();
 ?>
 
     <!-- Title Page -->
-  <!--  <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(view/content/images/home_slide_2.jpg);">
+  <!--<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(view/content/images/home_slide_2.jpg);">
         <h2 class="l-text2 t-center">
             Login
         </h2>
-    </section>-->
+    </section>
 
-    <!-- content page -->
-    <!--<section class="bgwhite p-t-66 p-b-60">
+
+    <section class="bgwhite p-t-66 p-b-60">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 p-b-30">
@@ -32,7 +32,7 @@ ob_start();
                         <h5><span style="color:red"><?= $loginErrorMessage; ?></span></h5>
                     <?php endif ?>
 
-                    <form class="col-12 col-sm-8 col-md-8 col-lg-5 col-xl-4 border border-primary" action="index.php?action=login" method="post" id="loginForm" >
+                    <form class="col-12 col-sm-8 col-md-8 col-lg-5 col-xl-4 border border-primary shadow-sm" action="index.php?action=login" method="post" id="loginForm" >
                         <h4 class="m-text26 p-b-36 p-t-15">
                             Connectez-vous
                         </h4>
@@ -58,17 +58,20 @@ ob_start();
         </div>
     </section>-->
 
-        <form action="../index.php?action=register" method="post" class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 border bg-light" id="loginForm">
-            <div class="form-group form">
-                <input type="email" id="inputUserEmailAddress" class="form-control" name="inputUserEmailAddress" placeholder="Adresse Email" required>
+        <form action="../index.php?action=register" method="post" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" id="loginForm">
+            <h4 class="titre-form">
+                Connectez-vous
+            </h4>
+            <div class="form form-group">
+                <input type="email" id="inputUserEmailAddress" class="form-control sizefull" name="inputUserEmailAddress" placeholder="Adresse Email" required>
             </div>
 
-            <div class="form-group form">
+            <div class="form form-group">
                 <input id="inputUserPsw" type="password" class="form-control" name="inputUserPsw" placeholder="Mot de passe" required>
             </div>
 
             <div class="col text-center">
-                <button id="btnSubmit" type="submit" class="btn btn-primary">Connexion</button>
+                <button id="btnSubmit" type="submit" class="btn btn-primary btnSubmit">Connexion</button>
             </div>
         </form>
 
