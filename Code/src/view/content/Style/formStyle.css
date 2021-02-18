@@ -46,19 +46,33 @@
 }
 
 /* ------ Register -------*/
-#log{
-    margin-top: 100px;
+
+#mainContainer{
+
 }
 
 #div_formRegisterLogin{
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     align-content: center;
+    background-color: blueviolet;
+    margin-top: 50px;
+}
+
+#log{
+    display: block;
+}
+
+#log:hover{
+
+}
+#registerForm{
+    padding: 5px;
 }
 
 #div_login{
-    padding: 10%;
+    height: 100%;
 }
 
 /* ------- Login ---------*/
