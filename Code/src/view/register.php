@@ -19,21 +19,30 @@ ob_start();
     <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(view/content/images/home_slide_2.jpg);"></section>
 
     <!--   <section class="login_part padding_top">-->
-    <section class="bgwhite p-t-66 p-b-60 bg-yellow">
+    <section class="bg-white p-t-66 p-b-60">
 
-        <div class="container bg-dark">
-            <div class="row align-items-center">
+        <div class="container-fluid">
+            <div class="row align-items-center" id="div_formRegisterLogin">
 
-                <div class="col-lg-6 col-md-6 bg-light">
+                <div class="col-lg-6 col-md-6 bg-light" id="log">
+
                     <div class="login_part_form">
+
                         <div class="login_part_form_inner">
+
                             <form class="form" action="index.php?action=register" method="post">
                                 <h4 class="titre-form">
                                     Inscrivez-vous
                                 </h4>
+
+                                <div class="form form-group">
+                                    <label for="userName"><b>Nom d'utilisateur</b></label>
+                                    <input type="userName" class="form-control" placeholder="Nom d'utilisateur" name="inputUserName" required>
+                                </div>
+
                                 <div class="form form-group">
                                     <label for="userEmail"><b>Adresse email</b></label>
-                                    <input type="email" class="form-control" placeholder="Email address" name="inputUserEmailAddress" required>
+                                    <input type="email" class="form-control" placeholder="Address email" name="inputUserEmailAddress" required>
                                 </div>
 
                                 <div class="form form-group">
@@ -46,18 +55,17 @@ ob_start();
                                     <input type="password" class="form-control" id="password" name="inputUserPswRepeat" placeholder="Mot de passe (vérification)">
                                 </div>
 
-                                <!--<div class="form form-group">
-                                    <div class="creat_account d-flex align-items-center">
-                                        En soumettant votre demande de compte, vous validez les conditions générales d'utilisation.<a
-                                                href="https://termsfeed.com/blog/privacy-policies-vs-terms-conditions/">CGU et vie privée</a>.
-                                    </div>
-                                    <input type="submit" value="Inscrivez-vous" class="flex-c-m size10 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-                                </div>-->
+                                <div class="form form-group">
+                                    <input id="inscrire" type="submit" value="Inscrivez-vous" class="btn btn-primary btnSubmit">
+                                </div>
                             </form>
+
                         </div>
+
                     </div>
+
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6 bg-light h-100" id="div_login">
                     <div class="login_part_text text-center">
                         <div class="login_part_text_iner">
                             <h2>Vous avez déjà un compte ?</h2>
