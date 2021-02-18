@@ -55,13 +55,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto mr-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <div class="tm-nav-link-highlight"></div>
-                            <a class="nav-link" href="#"
+                            <a class="nav-link" href="index.php?action=home"
                             >Home <span class="sr-only">(current)</span></a
                             >
                         </li>
-
+                        <li class="nav-item">
+                            <div class="tm-nav-link-highlight"></div>
+                            <a class="nav-link" href="index.php?action=annonces">Annonces</a>
+                        </li>
                         <?php if (!isset($_SESSION['userEmailAddress']) || (!isset($_GET['action'])) || ((@$_GET['action'] == "logout"))) : ?>
                             <li class="nav-item">
                                 <div class="tm-nav-link-highlight"></div>
