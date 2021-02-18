@@ -73,6 +73,10 @@ ob_start();
             <div class="col text-center">
                 <button id="btnSubmit" type="submit" class="btn btn-primary btnSubmit">Connexion</button>
             </div>
+
+            <div>
+                <span class="form-legend-text">Pas encore incris ? <a href="register.php">Inscrivez-vous ici!</a><span>
+            </div>
         </form>
 
 <?php
