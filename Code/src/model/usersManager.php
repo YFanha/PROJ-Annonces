@@ -55,7 +55,7 @@ function registerNewAccount($userEmailAddress, $userPsw)
 {
     //lire le fichier des users
 
-   $result = false;
+    $result = false;
     $users=getUsers();
     $userHashPsw = password_hash($userPsw, PASSWORD_DEFAULT);
 
