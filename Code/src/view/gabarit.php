@@ -28,15 +28,15 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="view/content/Style/formStyle.css" />
-
+    <link rel="stylesheet" href="view/content/Style/nav.css" />
 
 </head>
 <body>
-<div class="row tm-brand-rowl bg-yellow">
+<div class="row tm-brand-rowl bg-yellow" id="containerNav">
     <div class="col-lg-4 col-10">
         <div class="tm-brand-container">
             <div class="tm-brand-texts">
-                <h1 class="text-uppercase tm-brand-name">Web annonces</h1>
+                <h1 class="text-uppercase">Web annonces</h1>
             </div>
         </div>
     </div>

@@ -51,8 +51,8 @@ ob_start();
                                 </div>
 
                                 <div class="form form-group">
-                                    <label for="psw-repeat"><b>Vérifier le mot de passe</b></label>
-                                    <input type="password" class="form-control" id="password" name="inputUserPswRepeat" placeholder="Mot de passe (vérification)">
+                                    <label for="psw-repeat"><b>Confirmer le mot de passe</b></label>
+                                    <input type="password" class="form-control" id="password" name="inputUserPswRepeat" placeholder="Mot de passe (confirmation)">
                                 </div>
 
                                 <div class="form form-group">

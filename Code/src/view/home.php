@@ -10,7 +10,7 @@
 ob_start();
 $title = "Accueil";
 ?>
-    <section class="row tm-pt-4 tm-pb-6">
+    <!--<section class="row tm-pt-4 tm-pb-6">
         <div class="col-12 tm-page-cols-container">
             <div class="tm-page-col-right">
                 <h2 class="tm-text-secondary tm-mb-5">
@@ -74,11 +74,11 @@ $title = "Accueil";
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- row -->
 
     <!-- Call to Action -->
-    <section class="row" id="tmCallToAction">
+    <!--<section class="row" id="tmCallToAction">
         <div class="col-12 tm-page-cols-container tm-call-to-action-col">
             <div class="tm-page-col-right">
                 <div class="tm-call-to-action-box">
@@ -102,7 +102,7 @@ $title = "Accueil";
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 <?php
 $content = ob_get_clean();
 require "gabarit.php";
