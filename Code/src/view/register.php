@@ -1,10 +1,17 @@
 <?php
 /**
- * @file      register.php
- * @brief     This view is designed to display the register form
- * @author    Created by Pascal.BENZONANA
- * @author    Updated by Nicolas.GLASSEY
- * @version   13-APR-2020
+ * @file        register.php
+ * @brief       This view is designed to display the register form
+ * @author      Created by Pascal.BENZONANA
+ * @author      Updated by Nicolas.GLASSEY
+ * @version     13-APR-2020
+ *
+ * ***********************************
+ * @author      Updated by Yann.FANHA
+ * @author      Updated by Sven.VOLERY
+ * @version     19.02.2021
+ * @update      Mise en forme + nouveau champ 'username'
+ * @CSS         formStyle.css
  */
 
 $title = "S'inscrire - We";

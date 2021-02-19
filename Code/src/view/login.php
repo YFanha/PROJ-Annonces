@@ -7,7 +7,10 @@
  * @version   13-APR-2020
  *
  * ***********************************
- *
+ * @author      Updated by Yann.FANHA
+ * @version     19.02.2021
+ * @update      Mise en forme
+ * @CSS         formStyle.css
  */
 
 $title = 'Connectez-vous';
@@ -16,7 +19,7 @@ ob_start();
 ?>
 
     <!-- Title Page -->
-  <!--<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(view/content/images/home_slide_2.jpg);">
+    <!--<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(view/content/images/home_slide_2.jpg);">
         <h2 class="l-text2 t-center">
             Login
         </h2>
@@ -58,26 +61,26 @@ ob_start();
         </div>
     </section>-->
 
-        <form action="../index.php?action=register" method="post" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" id="loginForm">
-            <h4 class="titre-form">
-                Connectez-vous
-            </h4>
-            <div class="form form-group">
-                <input type="email" id="inputUserEmailAddress" class="form-control sizefull" name="inputUserEmailAddress" placeholder="Adresse Email" required>
-            </div>
+    <form action="../index.php?action=register" method="post" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" id="loginForm">
+        <h4 class="titre-form">
+            Connectez-vous
+        </h4>
+        <div class="form form-group">
+            <input type="email" id="inputUserEmailAddress" class="form-control sizefull" name="inputUserEmailAddress" placeholder="Adresse Email" required>
+        </div>
 
-            <div class="form form-group">
-                <input id="inputUserPsw" type="password" class="form-control" name="inputUserPsw" placeholder="Mot de passe" required>
-            </div>
+        <div class="form form-group">
+            <input id="inputUserPsw" type="password" class="form-control" name="inputUserPsw" placeholder="Mot de passe" required>
+        </div>
 
-            <div class="col text-center">
-                <button id="btnSubmit" type="submit" class="btn btn-primary btnSubmit">Connexion</button>
-            </div>
+        <div class="col text-center">
+            <button id="btnSubmit" type="submit" class="btn btn-primary btnSubmit">Connexion</button>
+        </div>
 
-            <div>
+        <div>
                 <span class="form-legend-text">Pas encore incris ? <a href="register.php">Inscrivez-vous ici!</a><span>
-            </div>
-        </form>
+        </div>
+    </form>
 
 <?php
 $content = ob_get_clean();
