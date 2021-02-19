@@ -30,6 +30,7 @@ $title = "Accueil";
         </div>
     </section>
 
+
     <div class="tm-page-col-right">
         <div class="row tm-pt-7 tm-pb-6">
             <div class="col-md-6 tm-home-section-2-left">
@@ -103,6 +104,12 @@ $title = "Accueil";
             </div>
         </div>
     </section>-->
+
+<div class="bg-yellow" id="test">
+    Bienvenu !
+</div>
+
+
 <?php
 $content = ob_get_clean();
 require "gabarit.php";

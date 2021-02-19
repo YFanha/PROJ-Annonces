@@ -6,8 +6,8 @@
  * @author    Updated by Nicolas.GLASSEY & Pascal BENZONANA
  * @version   03-MAY-2020
  */
-
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -31,8 +31,9 @@
     <link rel="stylesheet" href="view/content/Style/nav.css" />
 
 </head>
+
 <body>
-<div class="row tm-brand-rowl" id="containerNav">
+<div class="" id="containerNav">
     <div class="col-lg-4 col-10">
         <div class="tm-brand-container">
             <div class="tm-brand-texts" id="div_title_nav">
@@ -89,16 +90,12 @@
 </div>
 
 <?=$content; ?>
-
-<div>
-    <!-- Page footer -->
-    <footer class="row tm-page-footer">
+<!-- Page footer -->
+    <footer class="row tm-page-footer" id="containerFooter">
         <p class="col-12 tm-copyright-text mb-0">
-            Copyright &copy; 2019 Next Level Company... Designed by
             <a href="https://fb.com/templatemo" rel="nofollow" class="tm-copyright-link">Template Mo</a>
         </p>
     </footer>
-</div>
 
 <script src="view/content/js/jquery.min.js"></script>
 <script src="view/content/js/parallax.min.js"></script>
