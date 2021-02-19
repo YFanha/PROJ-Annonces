@@ -35,8 +35,8 @@
 <div class="row tm-brand-rowl bg-yellow" id="containerNav">
     <div class="col-lg-4 col-10">
         <div class="tm-brand-container">
-            <div class="tm-brand-texts">
-                <h1 class="text-uppercase">Web annonces</h1>
+            <div class="tm-brand-texts" id="div_title_nav">
+                <h1 class="text-uppercase" id="title_nav">Web annonces</h1>
             </div>
         </div>
     </div>
