@@ -32,7 +32,7 @@
 
 </head>
 <body>
-<div class="row tm-brand-rowl bg-yellow" id="containerNav">
+<div class="row tm-brand-rowl" id="containerNav">
     <div class="col-lg-4 col-10">
         <div class="tm-brand-container">
             <div class="tm-brand-texts" id="div_title_nav">
@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-8 col-2 tm-nav-col bg-yellow">
+    <div class="col-lg-8 col-2 tm-nav-col">
         <div class="tm-nav">
             <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
                 <button
@@ -54,7 +54,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto mr-0">
+                    <ul class="navbar-nav ml-auto mr-0" id="list_nav">
                         <li class="nav-item">
                             <div class="tm-nav-link-highlight"></div>
                             <a class="nav-link" href="index.php?action=home"
@@ -91,13 +91,13 @@
 <?=$content; ?>
 
 <div>
-<!-- Page footer -->
-<footer class="row tm-page-footer">
-    <p class="col-12 tm-copyright-text mb-0">
-        Copyright &copy; 2019 Next Level Company... Designed by
-        <a href="https://fb.com/templatemo" rel="nofollow" class="tm-copyright-link">Template Mo</a>
-    </p>
-</footer>
+    <!-- Page footer -->
+    <footer class="row tm-page-footer">
+        <p class="col-12 tm-copyright-text mb-0">
+            Copyright &copy; 2019 Next Level Company... Designed by
+            <a href="https://fb.com/templatemo" rel="nofollow" class="tm-copyright-link">Template Mo</a>
+        </p>
+    </footer>
 </div>
 
 <script src="view/content/js/jquery.min.js"></script>

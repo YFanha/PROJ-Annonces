@@ -4,4 +4,24 @@
     right: 0;
     left: 0;
     box-shadow: 0 1px 5px grey;
+    background-color: #cccccc;
+    color: black;
+}
+
+
+#containerFooter{
+    box-shadow: 1px 0 5px grey;
+}
+
+#div_title_nav{
+    padding: 25px;
+}
+
+#title_nav{
+    font-weight: bolder;
+}
+
+.nav-item a, a.nav-link, #list_nav a{
+    color: black;
+    font-weight: bolder;
 }
