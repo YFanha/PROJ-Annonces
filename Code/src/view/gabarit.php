@@ -93,7 +93,9 @@
 <!-- Page footer -->
     <footer class="row tm-page-footer" id="containerFooter">
         <p class="col-12 tm-copyright-text mb-0">
-            <a href="https://fb.com/templatemo" rel="nofollow" class="tm-copyright-link">Template Mo</a>
+            <a id="footer_texte">Projet Web Annonces / </a>
+            <a id="footer_texte">YFA - SVY - TSS</a>
+          <!--  <a href="https://fb.com/templatemo" id="lien_template" rel="nofollow" class="tm-copyright-link">Template Mo</a> -->
         </p>
     </footer>
 
