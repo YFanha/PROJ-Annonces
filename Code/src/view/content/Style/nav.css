@@ -34,3 +34,18 @@
     color: black;
     font-weight: bolder;
 }
+
+/* ----- Footer -------*/
+
+#containerFooter{
+    background-color: black;
+    padding-top: 15px;
+}
+
+#footer_texte{
+    color: white;
+}
+
+
+
+

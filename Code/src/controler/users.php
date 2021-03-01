@@ -15,6 +15,7 @@
  */
 function createSession($userEmailAddress)
 {
+    //TODO - AJOUTER L'ID à LA SESSION
     $_SESSION['userEmailAddress'] = $userEmailAddress;
 }
 
