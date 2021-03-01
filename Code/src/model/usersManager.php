@@ -54,15 +54,25 @@ function isLoginCorrect($userEmailAddress, $userPsw)
 function registerNewAccount($userEmailAddress, $userPsw)
 {
     //lire le fichier des users
-
     $result = false;
     $users=getUsers();
     $userHashPsw = password_hash($userPsw, PASSWORD_DEFAULT);
 
     //Ajouter la ligne de l'email(on pourrait vérifier s'il existe)
+
+    //TODO - VERIFIER SI IL EXISTE
+
+    //TODO - AJOUTER UN ID (REPRENDRE L'ID DU DERNIER USER ET AJOUTER 1 (ID + 1))
+
+
     $users[]=array('userEmailAddress'=>$userEmailAddress,"userHashPsw"=>$userHashPsw);
 
     //réécrire le fichier des users
     updateUsers($users);
+
     return true;
+}
+
+function getUserId(){
+    //TODO - get the id of the user who is login
 }
