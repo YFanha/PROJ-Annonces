@@ -94,3 +94,25 @@
     background-color: yellow;
 }
 
+/* ------- New annonces ---------*/
+#annonceForm{
+    display: block;
+    margin: 5% auto 10% auto;
+}
+
+#annonceForm .btn{
+    margin-top: 10px;
+}
+
+#description{
+    border-color: darkgrey;
+}
+
+#name{
+    border-color: darkgrey;
+}
+
+#prix{
+    border-color: darkgrey;
+}
+
