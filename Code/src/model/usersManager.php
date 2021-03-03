@@ -66,9 +66,11 @@ function registerNewAccount($userEmailAddress, $userPsw)
 
     echo gettype($users)." : TYPE <br>".$nbrUsers;
 
+    $emailAlreadyUsed = false;
+
     for($i = 0; $i < 1; $i++){
         if($userEmailAddress == $users[0]['userEmailAddress']){
-            //echo "fdsjaklfdsjbfjdlsjflésdfjdmceihf";
+            $emailAlreadyUsed = true;
         }
     }
 
