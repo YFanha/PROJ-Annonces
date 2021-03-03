@@ -26,8 +26,8 @@ function getUsers()
 function updateUsers($users){
 
     //Cette fonction réécrit tout le fichier users.json à partir du tableau associatif
-    file_put_contents("data/users.json",json_encode($users));
-
+    $result = file_put_contents("data/users.json",json_encode($users));
+    return $result;
 }
 function isLoginCorrect($userEmailAddress, $userPsw)
 {
@@ -62,13 +62,26 @@ function registerNewAccount($userEmailAddress, $userPsw)
 
     //TODO - VERIFIER SI IL EXISTE
 
+    $nbrUsers = count($users);
+
+    echo gettype($users)." : TYPE <br>".$nbrUsers;
+
+    for($i = 0; $i < 1; $i++){
+        if($userEmailAddress == $users[0]['userEmailAddress']){
+            //echo "fdsjaklfdsjbfjdlsjflésdfjdmceihf";
+        }
+    }
+
     //TODO - AJOUTER UN ID (REPRENDRE L'ID DU DERNIER USER ET AJOUTER 1 (ID + 1))
 
+    //echo $userEmailAddress . " " . $userHashPsw;
 
     $users[]=array('userEmailAddress'=>$userEmailAddress,"userHashPsw"=>$userHashPsw);
 
     //réécrire le fichier des users
     updateUsers($users);
+
+    //echo "<h1>". $users[0]['userEmailAddress']."</h1>";
 
     return true;
 }
