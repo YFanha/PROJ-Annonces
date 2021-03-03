@@ -15,11 +15,15 @@
 
 #containerFooter{
     height: 5%;
-    width: 100%;
     box-shadow: 1px 0 5px grey;
     position: absolute;
     bottom: 0;
-
+    right: 0;
+    left: 0;
+    background-color: black;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 #div_title_nav{
@@ -37,13 +41,13 @@
 
 /* ----- Footer -------*/
 
-#containerFooter{
-    background-color: black;
-    padding-top: 15px;
-}
 
 #footer_texte{
     color: white;
+}
+
+#initiale{
+    float: right;
 }
 
 
