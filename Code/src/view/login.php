@@ -61,7 +61,7 @@ ob_start();
         </div>
     </section>-->
 
-    <form action="../index.php?action=register" method="post" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" id="loginForm">
+    <form action="../index.php?action=login" method="post" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" id="loginForm">
         <h4 class="titre-form">
             Connectez-vous
         </h4>
