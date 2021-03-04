@@ -1,4 +1,14 @@
 <?php
+/**
+ * @file annoncesManager.php
+ * @description Fichier pour la manipulation des données des annonces
+ * @author Yann Fanha
+ *
+ */
+
+/**
+ * @return Annonces inscrite dans le fichier "annonces.json"
+*/
 function getAnnonces(){
     $filename = "data/annonces.json";
     $annonce =  json_decode(file_get_contents($filename),true);
