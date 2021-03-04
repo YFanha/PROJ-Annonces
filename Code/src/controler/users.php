@@ -15,8 +15,11 @@
  */
 function createSession($userEmailAddress)
 {
-    //TODO - AJOUTER L'ID à LA SESSION
+    //Get ID of the user
+    $id = getUserId($userEmailAddress);
+
     $_SESSION['userEmailAddress'] = $userEmailAddress;
+    $_SESSION['id'] = $id;
 }
 
 /**
@@ -30,6 +33,8 @@ function login($loginRequest)
         if (isset($loginRequest['inputUserEmailAddress']) && isset($loginRequest['inputUserPsw'])) {
             //extract login parameters
             $userEmailAddress = $loginRequest['inputUserEmailAddress'];
+            //mettre l'email en minuscule, pour l'identification (case-sensitive)
+            $userEmailAddress = strtolower($userEmailAddress);
             $userPsw = $loginRequest['inputUserPsw'];
 
             //try to check if user/psw are matching with the database
@@ -70,21 +75,26 @@ function register($registerRequest)
 {
     try {
         //variable set
-        if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat'])) {
+        if (isset($registerRequest['inputUserEmailAddress']) && isset($registerRequest['inputUserPsw']) && isset($registerRequest['inputUserPswRepeat']) && isset($registerRequest['inputUserName'])) {
 
             //extract register parameters
             $userEmailAddress = $registerRequest['inputUserEmailAddress'];
+            //mettre l'email en minuscule, pour l'identification (case-sensitive)
+            $userEmailAddress = strtolower($userEmailAddress);
+
             $userPsw = $registerRequest['inputUserPsw'];
             $userPswRepeat = $registerRequest['inputUserPswRepeat'];
+            $userName = $registerRequest['inputUserName'];
 
             if ($userPsw == $userPswRepeat) {
                 require_once "model/usersManager.php";
-                if (registerNewAccount($userEmailAddress, $userPsw)) {
+                $registerResult = registerNewAccount($userEmailAddress, $userPsw, $userName);
+                if ($registerResult) {
                     createSession($userEmailAddress);
                     $registerErrorMessage = null;
                     require "view/home.php";
-                } else {
-                    $registerErrorMessage = "L'inscription n'est pas possible avec les valeurs saisies !";
+                } else if (!$registerResult) {
+                    $registerErrorMessage = "Le nom d'utilisateur est déjà utilisé.";
                     require "view/register.php";
                 }
             } else {

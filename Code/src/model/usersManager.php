@@ -5,6 +5,12 @@
  * @author    Created by Pascal.BENZONANA
  * @author    Updated by Nicolas.GLASSEY
  * @version   13-APR-2020
+ * ************************
+ * @Update
+ * @Modify registerNewAccount()
+ * @author Yann Fanha
+ * @version 04.03.2020
+ * ************************
  */
 
 /**
@@ -23,11 +29,11 @@ function getUsers()
 
 }
 
+
 function updateUsers($users){
 
     //Cette fonction réécrit tout le fichier users.json à partir du tableau associatif
-    $result = file_put_contents("data/users.json",json_encode($users));
-    return $result;
+    file_put_contents("data/users.json",json_encode($users, JSON_PRETTY_PRINT));
 }
 function isLoginCorrect($userEmailAddress, $userPsw)
 {
@@ -37,7 +43,8 @@ function isLoginCorrect($userEmailAddress, $userPsw)
 
     foreach($users as $user){
         if ($user["userEmailAddress"]==$userEmailAddress) {
-            $result = password_verify($userPsw, $user["userHashPsw"]);
+            $temp = password_verify($userPsw, $user["userHashPsw"]);
+            $result = $temp;
         }
     }
 
@@ -48,46 +55,76 @@ function isLoginCorrect($userEmailAddress, $userPsw)
  * @brief This function is designed to register a new account
  * @param $userEmailAddress : must be meet RFC 5321/5322
  * @param $userPsw : user's password
- * @return bool : "true" only if the user doesn't already exist. In all other cases will be "false".
+ * @param $userName: username
+ * @return : true = register correct, 0 = username already used (error), -1 = email already used (error)
  * @throws ModelDataBaseException : will be throw if something goes wrong with the database opening process
  */
-function registerNewAccount($userEmailAddress, $userPsw)
+function registerNewAccount($userEmailAddress, $userPsw, $userName)
 {
-    //lire le fichier des users
     $result = false;
-    $users=getUsers();
-    $userHashPsw = password_hash($userPsw, PASSWORD_DEFAULT);
+    //lire le fichier des users
 
-    //Ajouter la ligne de l'email(on pourrait vérifier s'il existe)
+    $users=getUsers();
+    //Hash du mot de passe
+    $userHashPsw = password_hash($userPsw, PASSWORD_DEFAULT);
+    $userEmailAddress = strtolower($userEmailAddress);
+
+    //echo gettype($users);
 
     //TODO - VERIFIER SI IL EXISTE
+    $nbrUsers = count($users); //Variable pour définir le nombre d'utilisateurs inscrit
 
-    $nbrUsers = count($users);
+    $emailAlreadyUsed = false; //valeur par défaut = faux (n'existe pas encore)
+    $usrnameAlreadyUsed = false; //Valeur par défaut = false (n'existe pas)
 
-    echo gettype($users)." : TYPE <br>".$nbrUsers;
-
-    $emailAlreadyUsed = false;
-
-    for($i = 0; $i < 1; $i++){
-        if($userEmailAddress == $users[0]['userEmailAddress']){
-            $emailAlreadyUsed = true;
+    if($nbrUsers !== 0){ //Si il y'a des utilisateurs déjà inscrit
+        for($i = 0; $i < $nbrUsers; $i++){
+            if($userEmailAddress == $users[$i]['userEmailAddress']){
+                $emailAlreadyUsed = true;
+            }
+            if($userName == $users[$i]['userName']){
+                $usrnameAlreadyUsed = true;
+            }
         }
     }
 
-    //TODO - AJOUTER UN ID (REPRENDRE L'ID DU DERNIER USER ET AJOUTER 1 (ID + 1))
 
-    //echo $userEmailAddress . " " . $userHashPsw;
+    if(!$emailAlreadyUsed && !$usrnameAlreadyUsed){
+        //attribuer un id
+        $newID = getNewId($nbrUsers, $users);
 
-    $users[]=array('userEmailAddress'=>$userEmailAddress,"userHashPsw"=>$userHashPsw);
+        $users[]=array('id'=>$newID, 'userName'=>$userName, 'userEmailAddress'=>$userEmailAddress,"userHashPsw"=>$userHashPsw);
 
-    //réécrire le fichier des users
-    updateUsers($users);
 
-    //echo "<h1>". $users[0]['userEmailAddress']."</h1>";
+        //réécrire le fichier des users
+        updateUsers($users);
 
-    return true;
+        return true;
+    } else if ($usrnameAlreadyUsed ||$emailAlreadyUsed){
+        return false;
+    }
+
 }
 
-function getUserId(){
-    //TODO - get the id of the user who is login
+function getNewId($nbrUsers, $users){
+
+    //Verifier si il y'a des utilisateurs déjà inscrit, sinon, Id vaudra 0 (premier user);
+    if($nbrUsers !== 0){
+            //Trouver l'id du derniers utilisateurs et ajouter 1
+            $lastID = $users[$nbrUsers-1]['id'];
+            $id = $lastID + 1;
+    } else {
+        $id = 0;
+    }
+
+    return $id;
+}
+
+function getUserId($email){
+    $users = getUsers();
+    for($i = 0; $i < count($users); $i++){
+        if($email == $users[$i]['userEmailAddress']){
+            return $users[$i]['id'];
+        }
+    }
 }
