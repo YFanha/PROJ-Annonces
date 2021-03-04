@@ -4,5 +4,11 @@
         "userName": "YFA",
         "userEmailAddress": "yann.fanha-dias@cpnv.ch",
         "userHashPsw": "$2y$10$qM5loXeUJrkASDdxjDAyJeVMBjxNReYs17so03uRVhCkHwFY\/mhSe"
+    },
+    {
+        "id": 1,
+        "userName": "SVY",
+        "userEmailAddress": "sven.volery@cpnv.ch",
+        "userHashPsw": "$2y$10$ximINAsOeWVHtLs3NXcOXeFUbDw2MEfbYxWkwUT1a0n0PowhOIMte"
     }
 ]
