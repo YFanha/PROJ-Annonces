@@ -28,8 +28,8 @@ if (isset($_GET['action'])) {
         case 'register' :
             register($_POST);
             break;
-        case 'annonces':
-            registerAnnonces();
+        case 'addAnnonces':
+            registerAnnonces($_POST);
             break;
         default :
             lost();
