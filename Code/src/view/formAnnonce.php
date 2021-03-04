@@ -22,10 +22,10 @@ ob_start();
         <input type="number" id="prix" class="form-control sizefull" name="inputAnnoncePrice" placeholder="Prix en CHF" required>
     </div>
     <div class="form form-group">
-        <textarea id="description" class="form-control sizefull" name="inputAnnonceDescription" placeholder="Description"></textarea>
+        <textarea id="description" class="form-control sizefull" name="inputAnnonceDescription" placeholder="Description" required></textarea>
     </div>
     <div class="col text-center">
-        <input name="inputAnnoncePhoto" type="file" accept=".png, .jpg, .jpeg" size="20" />
+        <input name="inputAnnoncePhoto" type="file" accept=".png, .jpg, .jpeg" size="20" required/>
     </div>
     <div class="col text-center">
         <button id="btnSubmit" type="submit" class="btn btn-primary btnSubmit">Valider</button>
