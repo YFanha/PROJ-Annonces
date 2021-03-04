@@ -23,8 +23,9 @@
 
 function getUsers()
 {
+    $filename = "data/users.json";
     //Cette fonction renvoie un tableau avec les users
-    $tab =  json_decode(file_get_contents("data/users.json"),true); // by default, return everything as an associative array
+    $tab =  json_decode(file_get_contents($filename),true); // by default, return everything as an associative array
     return $tab; //renvoi du tableau
 
 }

@@ -62,10 +62,12 @@
                             >Home <span class="sr-only">(current)</span></a
                             >
                         </li>
+                        <?php if (isset($_SESSION['userEmailAddress']) && isset($_SESSION['id'])) :?>
                         <li class="nav-item">
                             <div class="tm-nav-link-highlight"></div>
-                            <a class="nav-link" href="index.php?action=annonces">Annonces</a>
+                            <a class="nav-link" href="index.php?action=addAnnonces">Ajouter une annonces</a>
                         </li>
+                        <?php endif;?>
                         <?php if (!isset($_SESSION['userEmailAddress']) || (!isset($_GET['action'])) || ((@$_GET['action'] == "logout"))) : ?>
                             <li class="nav-item">
                                 <div class="tm-nav-link-highlight"></div>
