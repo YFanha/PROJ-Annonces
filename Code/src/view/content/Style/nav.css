@@ -16,7 +16,7 @@
 #containerFooter{
     height: 5%;
     box-shadow: 1px 0 5px grey;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
