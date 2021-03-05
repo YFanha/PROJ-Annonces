@@ -24,8 +24,6 @@ if (isset($_GET['action'])) {
             break;
         case 'logout' :
             logout();
-            //test LVT
-            //sven
             break;
         case 'register' :
             register($_POST);
