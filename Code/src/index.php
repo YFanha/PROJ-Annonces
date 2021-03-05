@@ -33,6 +33,9 @@ if (isset($_GET['action'])) {
         case 'addAnnonces':
             registerAnnonces($_POST);
             break;
+        case 'displayAnnonces':
+            displayAnnonces();
+            break;
         default :
             lost();
     }
