@@ -25,7 +25,7 @@ ob_start();
         <textarea id="description" class="form-control sizefull" name="inputAnnonceDescription" placeholder="Description" required></textarea>
     </div>
     <div class="form form-group">
-        <select name="categorie" id="categorie" class="form-control sizefull">
+        <select name="inputAnnonceCategorie" id="categorie" class="form-control sizefull">
             <option value="choix">Choisissiez une catégorie</option>
             <option value="vente">Vente</option>
             <option value="location">Location</option>
