@@ -62,6 +62,10 @@
                             >Home <span class="sr-only">(current)</span></a
                             >
                         </li>
+                        <li class="nav-item">
+                            <div class="tm-nav-link-highlight"></div>
+                            <a class="nav-link" href="index.php?action=displayAnnonces">Annonces</a>
+                        </li>
                         <?php if (isset($_SESSION['userEmailAddress']) && isset($_SESSION['id'])) :?>
                         <li class="nav-item">
                             <div class="tm-nav-link-highlight"></div>
