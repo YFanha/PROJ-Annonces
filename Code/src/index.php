@@ -24,6 +24,7 @@ if (isset($_GET['action'])) {
             break;
         case 'logout' :
             logout();
+            //test
             break;
         case 'register' :
             register($_POST);
