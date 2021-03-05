@@ -10,5 +10,11 @@
         "userName": "SVY",
         "userEmailAddress": "sven.volery@cpnv.ch",
         "userHashPsw": "$2y$10$ximINAsOeWVHtLs3NXcOXeFUbDw2MEfbYxWkwUT1a0n0PowhOIMte"
+    },
+    {
+        "id": 2,
+        "userName": "Tiago",
+        "userEmailAddress": "tiago.santos@cpnv.ch",
+        "userHashPsw": "$2y$10$1LUez.V88Hd7oQwb5Tz1h.\/WMIpMZO8X0LpmJlX\/yRDx8KvSJhFKy"
     }
 ]

@@ -20,7 +20,7 @@ function updateAnnonce($annonces){
     file_put_contents($filename, json_encode($annonces, JSON_PRETTY_PRINT));
 }
 
-function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annoncePhoto){
+function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto){
     $result = false;
 
     $annonces = getAnnonces();
@@ -34,7 +34,7 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
     //get the user id
     $user_id = $_SESSION['id'];
 
-    $annonces[] = array('id'=>$id, 'annonceTitle'=>$annonceTitle, 'annonceDescription'=>$annonceDescription, 'annoncePrice'=>$annoncePrice, 'date'=>$date, 'user_id'=>$user_id, 'annoncePhoto'=>$annoncePhoto);
+    $annonces[] = array('id'=>$id, 'annonceTitle'=>$annonceTitle, 'annonceDescription'=>$annonceDescription, 'annonceCategorie'=>$annonceCategorie, 'annoncePrice'=>$annoncePrice, 'date'=>$date, 'user_id'=>$user_id, 'annoncePhoto'=>$annoncePhoto);
 
     updateAnnonce($annonces);
 
