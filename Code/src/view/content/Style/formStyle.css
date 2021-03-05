@@ -98,6 +98,7 @@
 #annonceForm{
     display: block;
     margin: 5% auto 10% auto;
+
 }
 
 #annonceForm .btn{
@@ -106,6 +107,7 @@
 
 #description{
     border-color: darkgrey;
+
 }
 
 #name{
@@ -115,4 +117,6 @@
 #prix{
     border-color: darkgrey;
 }
+
+
 
