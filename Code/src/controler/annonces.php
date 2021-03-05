@@ -5,7 +5,7 @@ function registerAnnonces($newAnnonce){
         isset($newAnnonce['inputAnnoncePrice']) &&
         isset($newAnnonce['inputAnnonceDescription']) &&
         isset($newAnnonce['inputAnnonceCategorie']) &&
-        isset($newAnnonce['inputAnnoncePhoto'])){
+        isset($newAnnonce['inputAnnoncePhoto']) && $newAnnonce['inputAnnonceCategorie'] !== "choix"){
 
         $annonceTitle = $newAnnonce['inputAnnonceTitle'];
         $annoncePrice = $newAnnonce['inputAnnoncePrice'];
@@ -16,13 +16,17 @@ function registerAnnonces($newAnnonce){
         require "model/annoncesManager.php";
         $registerResult = registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto);
         if ($registerResult){
-            require "view/home.php";
+            require "view/affichageAnnonces.php";
         }else{
             require "view/formAnnonce.php";
         }
     } else {
         require "view/formAnnonce.php";
     }
+}
+
+function displayAnnonces(){
+    require "view/affichageAnnonces.php";
 }
 
 ?>
