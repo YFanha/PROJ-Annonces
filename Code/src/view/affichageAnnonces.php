@@ -9,6 +9,10 @@
 
 $title = 'Annonces';
 
+require_once "model/annoncesManager.php";
+
+$annonces = getAnnonces();
+
 ob_start();
 ?>
 
