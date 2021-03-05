@@ -90,8 +90,9 @@
         </div>
     </div>
 </div>
-
+<div id="content">
 <?=$content; ?>
+</div>
 <!-- Page footer -->
     <footer class="row tm-page-footer" id="containerFooter">
         <p class="col-12 tm-copyright-text mb-0">
