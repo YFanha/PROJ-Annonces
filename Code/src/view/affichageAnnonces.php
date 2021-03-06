@@ -32,7 +32,7 @@ ob_start();
             <tr>
                <td><?=$annonce['id']?></td>
                <td><?=$annonce['annonceTitle']?></td>
-               <td><?=$annonce['annonceDescription']?></td>
+               <td class="description"><?=$annonce['annonceDescription']?></td>
                <td><?=$annonce['annoncePrice']?></td>
                <td><?=$annonce['date']?></td>
                <td><?=$annonce['user_id']?></td>

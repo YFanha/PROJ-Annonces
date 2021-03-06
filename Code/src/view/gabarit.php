@@ -29,6 +29,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="view/content/Style/formStyle.css" />
     <link rel="stylesheet" href="view/content/Style/nav.css" />
+    <link rel="stylesheet" href="view/content/Style/annonces.css" />
 
 </head>
 
