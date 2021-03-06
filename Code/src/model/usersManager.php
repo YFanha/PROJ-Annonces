@@ -72,7 +72,7 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName)
 
     //echo gettype($users);
 
-    //TODO - VERIFIER SI IL EXISTE
+
     $nbrUsers = count($users); //Variable pour définir le nombre d'utilisateurs inscrit
 
     $emailAlreadyUsed = false; //valeur par défaut = faux (n'existe pas encore)
