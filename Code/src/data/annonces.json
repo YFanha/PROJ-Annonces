@@ -1,12 +1,12 @@
 [
     {
         "id": 0,
-        "annonceTitle": "titre",
-        "annonceDescription": "desc",
-        "annonceCategorie": "vente",
-        "annoncePrice": "2",
-        "date": "05.03.2021",
+        "annonceTitle": "Exemple Annonce 06.03.2021",
+        "annonceDescription": "description",
+        "annonceCategorie": "location",
+        "annoncePrice": "1000",
+        "date": "06.03.2021",
         "user_id": 0,
-        "annoncePhoto": "view\\content\\imgAnnonce\\celica.jpg"
+        "annoncePhoto": "view\\content\\img\\annonces\\1615052422.jpg"
     }
 ]
