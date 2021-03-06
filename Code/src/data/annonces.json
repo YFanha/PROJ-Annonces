@@ -8,5 +8,15 @@
         "date": "06.03.2021",
         "user_id": 0,
         "annoncePhoto": "view\\content\\img\\annonces\\1615052422.jpg"
+    },
+    {
+        "id": 1,
+        "annonceTitle": "Test depuis application web mobile",
+        "annonceDescription": "Description",
+        "annonceCategorie": "services",
+        "annoncePrice": "1000",
+        "date": "06.03.2021",
+        "user_id": 0,
+        "annoncePhoto": "view\\content\\img\\annonces\\1615058272.jpeg"
     }
 ]
