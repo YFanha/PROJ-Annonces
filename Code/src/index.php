@@ -29,7 +29,7 @@ if (isset($_GET['action'])) {
             register($_POST);
             break;
         case 'addAnnonces':
-            registerAnnonces($_POST);
+            registerAnnonces($_POST, $_FILES);
             break;
         case 'displayAnnonces':
             displayAnnonces();

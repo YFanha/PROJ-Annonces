@@ -1,17 +1,19 @@
 <?php
 
-function registerAnnonces($newAnnonce){
+function registerAnnonces($newAnnonce, $pictureAnnonce){
+
     if(isset($newAnnonce['inputAnnonceTitle']) &&
         isset($newAnnonce['inputAnnoncePrice']) &&
         isset($newAnnonce['inputAnnonceDescription']) &&
         isset($newAnnonce['inputAnnonceCategorie']) &&
-        isset($newAnnonce['inputAnnoncePhoto']) && $newAnnonce['inputAnnonceCategorie'] !== "choix"){
+        $pictureAnnonce['inputAnnoncePhoto']['error'] == 0 && $newAnnonce['inputAnnonceCategorie'] !== "choix"){
 
         $annonceTitle = $newAnnonce['inputAnnonceTitle'];
         $annoncePrice = $newAnnonce['inputAnnoncePrice'];
         $annonceDescription = $newAnnonce['inputAnnonceDescription'];
         $annonceCategorie = $newAnnonce['inputAnnonceCategorie'];
-        $annoncePhoto = $newAnnonce['inputAnnoncePhoto'];
+        $annoncePhoto = $pictureAnnonce['inputAnnoncePhoto'];
+
 
         require "model/annoncesManager.php";
         $registerResult = registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto);

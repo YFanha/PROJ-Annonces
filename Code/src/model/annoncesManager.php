@@ -20,6 +20,14 @@ function updateAnnonce($annonces){
     file_put_contents($filename, json_encode($annonces, JSON_PRETTY_PRINT));
 }
 
+/**
+ * @param $annonceTitle
+ * @param $annoncePrice
+ * @param $annonceDescription
+ * @param $annonceCategorie
+ * @param $annoncePhoto => associative tab ('name', 'tmp_name', 'type' .. and others)
+ * @return bool
+ */
 function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto){
     $result = false;
 
@@ -27,18 +35,30 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
     $id = getNewAnnonceId($annonces);
     $date = date("d.m.Y");
 
-    //add path to the photo
-    $path = "view\content\imgAnnonce\\";
-    $annoncePhoto = $path . $annoncePhoto;
 
-    //get the user id
-    $user_id = $_SESSION['id'];
+    //-----------modify name to avoid to have to same file name--------------
+    $path = "view\content\img\annonces\\";
+    //get the extension
+    $extensionFile = "." . pathinfo($annoncePhoto['name'], PATHINFO_EXTENSION);
 
-    $annonces[] = array('id'=>$id, 'annonceTitle'=>$annonceTitle, 'annonceDescription'=>$annonceDescription, 'annonceCategorie'=>$annonceCategorie, 'annoncePrice'=>$annoncePrice, 'date'=>$date, 'user_id'=>$user_id, 'annoncePhoto'=>$annoncePhoto);
+    $newFilename = strval(time()) . $extensionFile;
+    $newFile = $path . $newFilename;
 
-    updateAnnonce($annonces);
 
-    return true;
+    //move the files into the dir
+    if(move_uploaded_file($annoncePhoto['tmp_name'], $newFile)){
+        //get the user id
+        $user_id = $_SESSION['id'];
+
+        $annonces[] = array('id'=>$id, 'annonceTitle'=>$annonceTitle, 'annonceDescription'=>$annonceDescription, 'annonceCategorie'=>$annonceCategorie, 'annoncePrice'=>$annoncePrice, 'date'=>$date, 'user_id'=>$user_id, 'annoncePhoto'=>$newFile);
+
+        updateAnnonce($annonces);
+
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
 }
 
 function getNewAnnonceId($annonces){
