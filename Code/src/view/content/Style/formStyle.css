@@ -118,5 +118,40 @@
     border-color: darkgrey;
 }
 
+/* ------- Annonces détaillée ---------*/
+
+#img{
+    width: 600px;
+}
+
+#imgAnnonce{
+   /* margin-left: 300px;
+    float:left;
+    width:150px;*/
+    background-color: blueviolet;
+    padding: 0;
+}
+
+#texteAnnonce{
+    background-color: bisque;
+}
+
+#mainContainerAnnonce{
+    height: 100%;
+    margin-top: 80px;
+    display: block;
+    background-color: aqua;
+}
+
+
+#annonceContainer{
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+}
+
+#texte2Annonce{
+    margin-top: 40px;
+}
 
 
