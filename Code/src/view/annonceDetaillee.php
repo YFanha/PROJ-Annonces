@@ -9,19 +9,40 @@
 
 //Tableau "annonce" définit dans annonces.php
 $title = $annonce['annonceTitle'];
-/*
- *  'id'
- *  'annonceTitle'
- *  'annonceDescription'
- *  'annonceCategorie'
- *  'annoncePrice'
- *  'date'
- *  'user_id'
- *  'annoncePhoto'
- */
 
 ob_start();
 ?>
+<div class="container-fluid border" id="mainContainerAnnonce">
+    <div id="annonceContainer">
+        <img src="<?=$annonce['annoncePhoto']?>"id="img">
+
+        <div class="container" id="texteAnnonce">
+            <div>
+                <h1><?=$annonce['annonceTitle']?></h1>
+            </div>
+        <div class="container" id="texte2Annonce">
+            <div class="texte">
+                <h4><?=$annonce['annonceCategorie']?></h4>
+            </div>
+            <div class="texte">
+                <h4><?=$annonce['annoncePrice']?> CHF</h4>
+            </div>
+            <div class="texte">
+                <h4><?=$annonce['annonceDescription']?></h4>
+            </div>
+            <div class="texte">
+                <h4><?=$annonce['date']?></h4>
+            </div>
+            <div>
+                <button class="btn btn-primary">test</button>
+                <?php
+                    //TODO AJOUTER EMAIL USER
+                ?>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
 
 
 <?php
