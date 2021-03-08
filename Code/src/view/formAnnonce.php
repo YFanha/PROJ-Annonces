@@ -27,9 +27,9 @@ ob_start();
     <div class="form form-group">
         <select name="inputAnnonceCategorie" id="categorie" class="form-control sizefull">
             <option value="choix">Choisissiez une catégorie</option>
-            <option value="vente">Vente</option>
-            <option value="location">Location</option>
-            <option value="services">Services</option>
+            <option value="Vente">Vente</option>
+            <option value="Location">Location</option>
+            <option value="Services">Services</option>
         </select>
     </div>
     <div class="col text-center">
