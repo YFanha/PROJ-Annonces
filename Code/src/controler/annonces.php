@@ -31,4 +31,12 @@ function displayAnnonces(){
     require "view/affichageAnnonces.php";
 }
 
+
+function displayAnnonceDetails(){
+    require "model/annoncesManager.php";
+    $annonce = getAnnonceFromId($_GET['id']);
+
+    require "view/annonceDetaillee.php";
+}
+
 ?>

@@ -34,6 +34,9 @@ if (isset($_GET['action'])) {
         case 'displayAnnonces':
             displayAnnonces();
             break;
+        case 'seeAnnonceDetails':
+            displayAnnonceDetails();
+            break;
         default :
             lost();
     }

@@ -12,7 +12,6 @@ $title = 'Annonces';
 require_once "model/annoncesManager.php";
 
 $annonces = getAnnonces();
-
 ob_start();
 ?>
 
@@ -29,14 +28,16 @@ ob_start();
             <th>Photo</th>
         </tr>
         <?php foreach ($annonces as $annonce) : ?>
+                <?php $annonceId = $annonce['id']?>
+
             <tr>
-               <td><?=$annonce['id']?></td>
-               <td><?=$annonce['annonceTitle']?></td>
-               <td class="description"><?=$annonce['annonceDescription']?></td>
-               <td><?=$annonce['annoncePrice']?></td>
-               <td><?=$annonce['date']?></td>
-               <td><?=$annonce['user_id']?></td>
-               <td><?=$annonce['annoncePhoto']?></td>
+                <td> <a href="index.php?action=seeAnnonceDetails&id=<?=$annonceId?>"> <?=$annonce['id']?></a> </td>
+                <td> <a href="index.php?action=seeAnnonceDetails&id=<?=$annonceId?>"> <?=$annonce['annonceTitle']?></a> </td>
+                <td class="description"><?=$annonce['annonceDescription']?></td>
+                <td><?=$annonce['annoncePrice']?></td>
+                <td><?=$annonce['date']?></td>
+                <td><?=$annonce['user_id']?></td>
+                <td><?=$annonce['annoncePhoto']?></td>
             </tr>
         <?php endforeach ?>
         </tbody>

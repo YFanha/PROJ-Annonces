@@ -6,6 +6,7 @@
  *
  */
 
+
 /**
  * @return Annonces inscrite dans le fichier "annonces.json"
 */
@@ -13,6 +14,16 @@ function getAnnonces(){
     $filename = "data/annonces.json";
     $annonce =  json_decode(file_get_contents($filename),true);
     return $annonce; //renvoi du tableau des annonces
+}
+
+function getAnnonceFromId($id){
+    $annonces = getAnnonces();
+    for($index = 0; $index < count($annonces); $index++){
+        if($id == $annonces[$index]['id']){
+           return $annonces[$index];
+        }
+    }
+
 }
 
 function updateAnnonce($annonces){
