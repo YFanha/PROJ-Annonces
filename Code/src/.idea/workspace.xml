@@ -4,11 +4,9 @@
     <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/annonces.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/annonces.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/annonces.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/annoncesManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annoncesManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/affichageAnnonces.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/affichageAnnonces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/formAnnonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/formAnnonce.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/usersManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/usersManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/annonceDetaillee.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/annonceDetaillee.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +69,7 @@
       <workItem from="1615148031422" duration="305000" />
       <workItem from="1615203603424" duration="3000" />
       <workItem from="1615378844284" duration="4830000" />
+      <workItem from="1615403954273" duration="2514000" />
     </task>
     <servers />
   </component>
@@ -94,17 +93,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/controler/annonces.php</url>
-          <line>17</line>
+          <line>21</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/model/annoncesManager.php</url>
-          <line>68</line>
+          <line>67</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/model/annoncesManager.php</url>
-          <line>64</line>
+          <line>63</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
