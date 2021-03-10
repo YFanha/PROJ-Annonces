@@ -15,6 +15,10 @@ $annonces = getAnnonces();
 ob_start();
 ?>
 
+<?php if ($deleteAnnonceErrorMessage != null) : ?>
+    <h5><span style="color:red"><?= $deleteAnnonceErrorMessage; ?></span></h5>
+<?php endif ?>
+
 <div class="table-responsive">
     <table class="table textcolor">
         <tbody>
@@ -27,6 +31,7 @@ ob_start();
             <th>Utilisateurs</th>
             <th>Photo</th>
         </tr>-->
+
         <?php foreach ($annonces as $annonce) : ?>
                 <?php $annonceId = $annonce['id']?>
 

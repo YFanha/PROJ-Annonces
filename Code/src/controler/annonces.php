@@ -21,6 +21,7 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
             require "view/affichageAnnonces.php";
         }else{
             require "view/formAnnonce.php";
+            $registerAnnonceErrorMessage = "Echec de l'enregistrement de l'annonce.";
         }
     } else {
         require "view/formAnnonce.php";
@@ -46,9 +47,10 @@ function deleteAnnonce(){
     $index = getAnnonceIndexFromId($_GET['id']);
 
     if ($index != false || $index == 0){
-        
+        removeAnnonce($index);
+        require "view/affichageAnnonces.php";
     }else{
-
+        $deleteAnnonceErrorMessage = "Echec de la suppression de l'annonce.";
     }
 }
 
