@@ -7,10 +7,9 @@
  * @version   13-APR-2020
  * ************************
  * @Update
- * @Modify registerNewAccount()
+ * @Modify Add fonctions
  * @author Yann Fanha
- * @version 04.03.2020
- * ************************
+ * last edit :  10.03.2020
  */
 
 /**
@@ -20,7 +19,6 @@
  * @return bool : "true" only if the user and psw match the database. In all other cases will be "false".
  * @throws ModelDataBaseException : will be throw if something goes wrong with the database opening process
  */
-
 function getUsers()
 {
     $filename = "data/users.json";
@@ -30,12 +28,21 @@ function getUsers()
 
 }
 
-
+/**
+ * @brief fonction qui réecrit le tableau des utilisateurs dans le fichier JSON
+ * @param $users
+ */
 function updateUsers($users){
 
     //Cette fonction réécrit tout le fichier users.json à partir du tableau associatif
     file_put_contents("data/users.json",json_encode($users, JSON_PRETTY_PRINT));
 }
+
+/**
+ * @param $userEmailAddress : user's email
+ * @param $userPsw user's password
+ * @return bool
+ */
 function isLoginCorrect($userEmailAddress, $userPsw)
 {
     $result = false;
@@ -107,6 +114,12 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName)
 
 }
 
+/**
+ * @brief Fonction qui sert à définir un nouvel Id pour le nouvel utilisateurs
+ * @param $nbrUsers : nombre d'utilisateurs
+ * @param $users :  tableau des utilisateurs
+ * @return int : Nouvel Id pour un nouvel utilisateur
+ */
 function getNewId($nbrUsers, $users){
 
     //Verifier si il y'a des utilisateurs déjà inscrit, sinon, Id vaudra 0 (premier user);
@@ -121,6 +134,25 @@ function getNewId($nbrUsers, $users){
     return $id;
 }
 
+/**
+ * @brief Fonction qui retrouve un utilisateurs avec son id
+ * @param $id : id recherché
+ * @return array : valeur de l'utilisateur correspondant à l'id
+ */
+function getUserById($id){
+    $users = getUsers();
+    for($i = 0; $i < count($users); $i++){
+        if($id == $users[$i]['id']){
+            return $users[$i];
+        }
+    }
+}
+
+/**
+ * @brief Fonction qui renvoi l'id d'un utilisateur avec son email
+ * @param $email : email de l'utilisateur dont nous voulons l'id
+ * @return numeric : ID of user
+ */
 function getUserId($email){
     $users = getUsers();
     for($i = 0; $i < count($users); $i++){
