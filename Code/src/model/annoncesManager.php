@@ -2,13 +2,12 @@
 /**
  * @file annoncesManager.php
  * @description Fichier pour la manipulation des données des annonces
- * @author Yann Fanha
- *
+ * @author Yann Fanha & Tiago Santos
  */
 
 
 /**
- * @return Annonces inscrite dans le fichier "annonces.json"
+ * @return array annonces inscrite dans le fichier "annonces.json"
 */
 function getAnnonces(){
     $filename = "data/annonces.json";
