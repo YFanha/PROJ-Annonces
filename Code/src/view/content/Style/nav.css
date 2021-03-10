@@ -9,7 +9,6 @@ body{
     right: 0;
     left: 0;
     position: fixed;
-    margin-bottom: 8.7%;
 }
 
 #containerNav{
@@ -27,18 +26,7 @@ body{
 }
 
 
-#containerFooter{
-    height: 5%;
-    box-shadow: 1px 0 5px grey;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: black;
-    padding-top: 15px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
+
 
 #div_title_nav{
     padding: 25px;
@@ -54,7 +42,18 @@ body{
 }
 
 /* ----- Footer -------*/
-
+#containerFooter{
+    height: 10%;
+    box-shadow: 1px 0 5px grey;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
 
 #footer_texte{
     color: white;
@@ -62,10 +61,6 @@ body{
 
 #initiale{
     float: right;
-}
-
-#containerFooter{
-    position: fixed;
 }
 
 
