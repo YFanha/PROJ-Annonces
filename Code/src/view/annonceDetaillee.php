@@ -12,7 +12,7 @@ $title = $annonce['annonceTitle'];
 
 ob_start();
 ?>
-<div class="container-fluid border" id="mainContainerAnnonce">
+<div class="container-fluid" id="mainContainerAnnonce">
     <div id="annonceContainer">
         <img src="<?=$annonce['annoncePhoto']?>"id="img">
 
@@ -34,7 +34,9 @@ ob_start();
                 <h4><?=$annonce['date']?></h4>
             </div>
             <div>
-                <button class="btn btn-primary">test</button>
+                <br>
+                <button class="btn btn-warning">Modifier</button>
+                <button class="btn btn-danger">Supprimer</button>
                 <?php
                     //TODO AJOUTER EMAIL USER
                 ?>
