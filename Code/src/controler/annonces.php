@@ -33,12 +33,10 @@ function displayAnnonces(){
 
 
 function displayAnnonceDetails(){
-    /*require "model/annoncesManager.php";
+    require "model/annoncesManager.php";
     $annonce = getAnnonceFromId($_GET['id']);
 
-    require "view/annonceDetaillee.php";*/
-
-
+    require "view/annonceDetaillee.php";
 }
 
 function deleteAnnonce(){
