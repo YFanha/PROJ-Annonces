@@ -35,8 +35,8 @@ ob_start();
             </div>
             <div>
                 <br>
-                <button class="btn btn-warning">Modifier</button>
-                <button class="btn btn-danger">Supprimer</button>
+                <a href="index.php?action=updateAnnonce&id=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
+                <a href="index.php?action=deleteAnnonce&id=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
                 <?php
                     //TODO AJOUTER EMAIL USER
                 ?>

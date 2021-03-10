@@ -94,4 +94,19 @@ function getNewAnnonceId($annonces){
     return $id;
 }
 
+function removeAnnonce($index){
+    $annonce = getAnnonces();
+
+    unset($annonce[$index]);
+    $annonce = array_values($annonce);
+
+    if($annonce != false || $annonce == null){
+        updateAnnonce($annonce);
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
 ?>
