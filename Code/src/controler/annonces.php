@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @file annoncesManager.php
+ * @description Fichier pour l'appelle des fonctions de modifications de données et vérification des données
+ * @author Yann Fanha
+ */
 function registerAnnonces($newAnnonce, $pictureAnnonce){
 
     if(isset($newAnnonce['inputAnnonceTitle']) &&
@@ -32,11 +36,14 @@ function displayAnnonces(){
     require "view/affichageAnnonces.php";
 }
 
-
 function displayAnnonceDetails(){
     require "model/annoncesManager.php";
+    require "model/usersManager.php";
+
     $annonce = getAnnonceFromId($_GET['id']);
 
+    $user = getUserById($annonce['user_id']);
+    $userEmail = $user['userEmailAddress'];
     require "view/annonceDetaillee.php";
 }
 
