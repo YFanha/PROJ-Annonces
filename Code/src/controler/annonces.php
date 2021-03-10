@@ -39,4 +39,17 @@ function displayAnnonceDetails(){
     require "view/annonceDetaillee.php";
 }
 
+function deleteAnnonce(){
+    require_once "model/annoncesManager.php";
+    $index = false;
+
+    $index = getAnnonceIndexFromId($_GET['id']);
+
+    if ($index != false || $index == 0){
+        
+    }else{
+
+    }
+}
+
 ?>

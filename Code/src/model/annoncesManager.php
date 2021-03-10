@@ -23,7 +23,16 @@ function getAnnonceFromId($id){
            return $annonces[$index];
         }
     }
+}
 
+function getAnnonceIndexFromId($id){
+    $annonces = getAnnonces();
+    for($index = 0; $index < count($annonces); $index++){
+        if($id == $annonces[$index]['id']){
+            return $index;
+        }
+    }
+    return false;
 }
 
 function updateAnnonce($annonces){
