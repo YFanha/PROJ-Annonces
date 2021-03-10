@@ -37,6 +37,9 @@ if (isset($_GET['action'])) {
         case 'seeAnnonceDetails':
             displayAnnonceDetails();
             break;
+        case 'deleteAnnonce':
+            deleteAnnonce();
+            break;
         default :
             lost();
     }
