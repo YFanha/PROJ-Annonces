@@ -107,7 +107,6 @@
 
 #description{
     border-color: darkgrey;
-
 }
 
 #name{
@@ -132,20 +131,18 @@
     padding: 0;
 }
 
-#texteAnnonce{
-    background-color: bisque;
-}
+
 
 #mainContainerAnnonce{
     height: 100%;
     margin-top: 80px;
     display: block;
-    background-color: aqua;
+    border: solid 1px darkgrey;
+    padding: 50px;
 }
 
 
 #annonceContainer{
-    background-color: yellow;
     display: flex;
     flex-direction: row;
 }
