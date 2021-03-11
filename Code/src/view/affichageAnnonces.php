@@ -12,6 +12,8 @@ $title = 'Annonces';
 require_once "model/annoncesManager.php";
 
 $annonces = getAnnonces();
+$nbAnnonce = intval(count($annonces));
+
 ob_start();
 ?>
 
@@ -25,7 +27,7 @@ ob_start();
     <div class="row" id="annonce-container">
         <div class="grid-container">
             <?php foreach ($annonces as $annonce) : ?>
-                    <?php $annonceId = $annonce['id']?>
+                <?php $annonceId = $annonce['id']?>
                 <div class="card" style="width: 18rem;">
                     <img src="<?=$annonce['annoncePhoto']?>" class="card-img-top" alt="...">
                     <div class="card-body">

@@ -7,10 +7,6 @@
     overflow-y: auto;
 }*/
 
-
-
-
-
 #center_annonce{
     display: flex;
     justify-content: center;
@@ -33,7 +29,7 @@
 @media only screen and (min-width: 1250px) {
     .grid-container{
         display: grid;
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(4, 1fr);
         padding: 5px;
     }
 }
@@ -41,7 +37,7 @@
 @media only screen and (max-width: 1250px) {
     .grid-container{
         display: grid;
-        grid-template-columns: repeat(3, 33%);
+        grid-template-columns: repeat(3, 1fr);
         padding: 5px;
     }
 }
@@ -49,7 +45,7 @@
 @media only screen and (max-width: 1150px) {
     .grid-container{
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 1fr);
         padding: 5px;
     }
 }
@@ -61,6 +57,7 @@
         padding: 5px;
     }
 }
+
 
 .card {
     box-shadow: 0 1px 1px 1px rgb(168, 168, 168);
