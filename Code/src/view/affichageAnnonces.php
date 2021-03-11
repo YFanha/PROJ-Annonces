@@ -33,8 +33,8 @@ ob_start();
                     <div class="card-body">
                         <h5 class="card-title"><?=$annonce['annonceTitle']?></h5>
                         <p class="card-text"><?=$annonce['annonceDescription']?></p>
-                        <p class="card-text"><?=$annonce['annonceCategorie']?></p>
-                        <a href="index.php?action=seeAnnonceDetails&id=<?=$annonceId?>" class="btn btn-primary">Voir annonce</a>
+                        <p class="card-text">Type : <?=$annonce['annonceCategorie']?></p>
+                        <a href="index.php?action=seeAnnonceDetails&id=<?=$annonceId?>" class="btn btn-primary btnAnnonce">Voir annonce</a>
                     </div>
                 </div>
             <?php endforeach ?>

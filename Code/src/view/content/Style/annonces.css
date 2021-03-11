@@ -14,7 +14,7 @@
 
 #annonce-container{
     padding: 10px;
-    margin: 5px;
+    margin: 20px;
     display: flex;
     justify-content: center;
     background-color: #dddddd;
@@ -63,6 +63,11 @@
     box-shadow: 0 1px 1px 1px rgb(168, 168, 168);
     margin: 9px;
     padding: 7px;
+}
+
+
+.btnAnnonce{
+    width: 100%;
 }
 
 
