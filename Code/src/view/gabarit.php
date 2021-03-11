@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title><?=$title; ?></title>
+    <title><?= $title; ?></title>
     <meta charset="UTF-8">
 
     <meta charset="UTF-8" />
@@ -38,7 +38,7 @@
     <div class="col-lg-4 col-10">
         <div class="tm-brand-container">
             <div class="tm-brand-texts" id="div_title_nav">
-                <h1 class="text-uppercase" id="title_nav">Web annonces</h1>
+                <h1 class="text-uppercase" id="title_nav"><a href="https://github.com/YFanha">Web annonces</a></h1>
             </div>
         </div>
     </div>
@@ -99,16 +99,15 @@
 <?=$content; ?>
 </div>
 <!-- Page footer -->
-    <footer class="row tm-page-footer" id="containerFooter">
+    <!--<footer id="containerFooter">
         <p class="col-12 tm-copyright-text mb-0">
-            <a id="footer_texte">Projet Web Annonces</a>
-            <span id="initiale"><a id="footer_texte">YFA - SVY - TSS</a></span>
-          <!--  <a href="https://fb.com/templatemo" id="lien_template" rel="nofollow" class="tm-copyright-link">Template Mo</a> -->
+            <a href="https://github.com/YFanha/PROJ-Annonces" id="footer_texte">Projet Web Annonces</a>
+            <span id="initiale"><a href="https://github.com/YFanha/PROJ-Annonces" id="footer_texte">YFA - SVY - TSS</a></span>
         </p>
-    </footer>
+    </footer>-->
 
+</body>
 <script src="view/content/js/jquery.min.js"></script>
 <script src="view/content/js/parallax.min.js"></script>
 <script src="view/content/js/bootstrap.min.js"></script>
-</body>
 </html>

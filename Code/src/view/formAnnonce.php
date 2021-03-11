@@ -10,6 +10,9 @@ $title = 'Créer votre annonce';
 
 ob_start();
 ?>
+<?php if ($registerErrorMessage != null) : ?>
+    <h5><span style="color:red"><?= $registerErrorMessage; ?></span></h5>
+<?php endif ?>
 
 <form action="../index.php?action=addAnnonces" method="post" enctype="multipart/form-data" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" id="annonceForm">
     <h4 class="titre-form">

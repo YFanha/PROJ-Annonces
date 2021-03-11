@@ -2,13 +2,12 @@
 /**
  * @file annoncesManager.php
  * @description Fichier pour la manipulation des données des annonces
- * @author Yann Fanha
- *
+ * @author Yann Fanha & Tiago Santos
  */
 
 
 /**
- * @return Annonces inscrite dans le fichier "annonces.json"
+ * @return array annonces inscrite dans le fichier "annonces.json"
 */
 function getAnnonces(){
     $filename = "data/annonces.json";
@@ -23,7 +22,16 @@ function getAnnonceFromId($id){
            return $annonces[$index];
         }
     }
+}
 
+function getAnnonceIndexFromId($id){
+    $annonces = getAnnonces();
+    for($index = 0; $index < count($annonces); $index++){
+        if($id == $annonces[$index]['id']){
+            return $index;
+        }
+    }
+    return false;
 }
 
 function updateAnnonce($annonces){
@@ -48,7 +56,7 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
 
 
     //-----------modify name to avoid to have to same file name--------------
-    $path = "view\content\img\annonces\\";
+    $path = "data\img\annonces\\";
     //get the extension
     $extensionFile = "." . pathinfo($annoncePhoto['name'], PATHINFO_EXTENSION);
 
@@ -83,6 +91,24 @@ function getNewAnnonceId($annonces){
     }
 
     return $id;
+}
+
+function removeAnnonce($index){
+    $annonce = getAnnonces();
+
+    //delete img
+    unlink($annonce[$index]['annoncePhoto']);
+
+    unset($annonce[$index]);
+    $annonce = array_values($annonce);
+
+    if($annonce != false || $annonce == null){
+        updateAnnonce($annonce);
+        return true;
+    }else{
+        return false;
+    }
+
 }
 
 ?>

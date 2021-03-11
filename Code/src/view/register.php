@@ -20,7 +20,6 @@ ob_start();
 
 <?php if ($registerErrorMessage != null) : ?>
     <h5><span style="color:red"><?= $registerErrorMessage; ?></span></h5>
-
 <?php endif ?>
     <!-- Title Page -->
     <!--<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(view/content/images/home_slide_2.jpg);"></section>-->

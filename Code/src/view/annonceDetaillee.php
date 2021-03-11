@@ -12,7 +12,7 @@ $title = $annonce['annonceTitle'];
 
 ob_start();
 ?>
-<div class="container-fluid border" id="mainContainerAnnonce">
+<div class="container-fluid" id="mainContainerAnnonce">
     <div id="annonceContainer">
         <img src="<?=$annonce['annoncePhoto']?>"id="img">
 
@@ -31,14 +31,15 @@ ob_start();
                 <h4><?=$annonce['annonceDescription']?></h4>
             </div>
             <div class="texte">
-                <h4><?=$annonce['date']?></h4>
+                <h4>Posté le <?=$annonce['date']?> par <i><a href="mailto:<?=$userEmail?>" class="link-info"><?=$userEmail?></a></i></h4>
             </div>
+            <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
             <div>
-                <button class="btn btn-primary">test</button>
-                <?php
-                    //TODO AJOUTER EMAIL USER
-                ?>
+                <br>
+                <a href="index.php?action=updateAnnonce&id=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
+                <a href="index.php?action=deleteAnnonce&id=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
             </div>
+            <?php endif; ?>
         </div>
         </div>
     </div>

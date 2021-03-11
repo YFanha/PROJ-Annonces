@@ -1,10 +1,74 @@
-.description{
+/*.description{
     display: inline-block;
     height: 100px;
     width: 100%;
     word-break: break-all;
     overflow-x: hidden;
     overflow-y: auto;
+}*/
+
+#center_annonce{
+    display: flex;
+    justify-content: center;
 }
+
+#annonce-container{
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #dddddd;
+    width: min-content;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 1px 8px 3px rgba(168,168,168,1);
+    -moz-box-shadow: 0px 1px 8px 3px rgba(168,168,168,1);
+    box-shadow: 0px 1px 8px 3px rgba(168,168,168,1);
+}
+
+
+@media only screen and (min-width: 1250px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        padding: 5px;
+    }
+}
+
+
+.card {
+    box-shadow: 0 1px 1px 1px rgb(168, 168, 168);
+    margin: 9px;
+    padding: 7px;
+}
+
+
+.btnAnnonce{
+    width: 100%;
+}
+
 
 
