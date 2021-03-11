@@ -38,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../tools/php74/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Volery-Sven/Castro" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -60,6 +60,8 @@
       <workItem from="1614887627941" duration="1464000" />
       <workItem from="1615047648453" duration="4820000" />
       <workItem from="1615148031422" duration="305000" />
+      <workItem from="1615232450221" duration="643000" />
+      <workItem from="1615308191378" duration="15000" />
     </task>
     <servers />
   </component>
@@ -78,22 +80,28 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="-1180" y="274" key="FileChooserDialogImpl" timestamp="1615308205036">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1615308205036" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/controler/annonces.php</url>
-          <line>17</line>
+          <line>19</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/model/annoncesManager.php</url>
-          <line>48</line>
+          <line>79</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/model/annoncesManager.php</url>
-          <line>44</line>
+          <line>75</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
