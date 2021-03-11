@@ -4,23 +4,18 @@
     <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/annonces.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/annonces.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/annoncesManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annoncesManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/affichageAnnonces.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/affichageAnnonces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/Style/affichangeannonces.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view/content/Style/annonces.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/Style/annonces.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/bootstrap-5.0.0-beta2-dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/bootstrap-5.0.0-beta2-dist/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615052422.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615058272.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615369748.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615370199.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615370249.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615370270.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615383482.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615384059.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615384819.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615384881.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615384886.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615384970.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615385064.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/css/templatemo-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/css/templatemo-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450619.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450638.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450673.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450691.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450726.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +62,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yann7\Documents\GitHub\PROJ-Annonces\Code\src\data" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="server" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
       <method v="2" />
@@ -91,6 +91,8 @@
       <workItem from="1615450417355" duration="73000" />
       <workItem from="1615450569092" duration="184000" />
       <workItem from="1615450840229" duration="19000" />
+      <workItem from="1615456684201" duration="4717000" />
+      <workItem from="1615464470684" duration="950000" />
     </task>
     <servers />
   </component>
