@@ -56,7 +56,7 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
 
 
     //-----------modify name to avoid to have to same file name--------------
-    $path = "view\content\img\annonces\\";
+    $path = "data\img\annonces\\";
     //get the extension
     $extensionFile = "." . pathinfo($annoncePhoto['name'], PATHINFO_EXTENSION);
 
@@ -95,6 +95,9 @@ function getNewAnnonceId($annonces){
 
 function removeAnnonce($index){
     $annonce = getAnnonces();
+
+    //delete img
+    unlink($annonce[$index]['annoncePhoto']);
 
     unset($annonce[$index]);
     $annonce = array_values($annonce);
