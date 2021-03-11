@@ -3,19 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/annonces.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/annonces.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/annoncesManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annoncesManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/affichageAnnonces.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/affichageAnnonces.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/content/Style/annonces.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/Style/annonces.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/contact.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view/content/css/templatemo-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/css/templatemo-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450619.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450638.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450673.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450691.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/img/annonces/1615450726.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/gallery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +88,7 @@
       <workItem from="1615450840229" duration="19000" />
       <workItem from="1615456684201" duration="4717000" />
       <workItem from="1615464470684" duration="950000" />
+      <workItem from="1615465639929" duration="32000" />
     </task>
     <servers />
   </component>
