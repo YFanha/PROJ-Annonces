@@ -26,7 +26,6 @@
     /*background-color: yellow;*/
 }
 
-
 /***************************************************************************************************
     Style pour le petit texte de redirection vers le formulaire d'inscription ou de connextion
  */
@@ -116,39 +115,3 @@
 #prix{
     border-color: darkgrey;
 }
-
-/* ------- Annonces détaillée ---------*/
-
-#img{
-    width: 600px;
-}
-
-#imgAnnonce{
-   /* margin-left: 300px;
-    float:left;
-    width:150px;*/
-    background-color: blueviolet;
-    padding: 0;
-}
-
-
-
-#mainContainerAnnonce{
-    height: 100%;
-    margin-top: 80px;
-    display: block;
-    border: solid 1px darkgrey;
-    padding: 50px;
-}
-
-
-#annonceContainer{
-    display: flex;
-    flex-direction: row;
-}
-
-#texte2Annonce{
-    margin-top: 40px;
-}
-
-
