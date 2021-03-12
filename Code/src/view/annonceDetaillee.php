@@ -18,7 +18,7 @@ ob_start();
 
         <div class="container" id="texteAnnonce">
             <div>
-                <h1><?=$annonce['annonceTitle']?></h1>
+                <h1><strong><?=$annonce['annonceTitle']?></strong></h1>
             </div>
         <div class="container" id="texte2Annonce">
             <div class="texte">
@@ -28,19 +28,22 @@ ob_start();
                 <h4><?=$annonce['annoncePrice']?> CHF</h4>
             </div>
             <div class="texte">
-                <h4><?=$annonce['annonceDescription']?></h4>
-            </div>
-            <div class="texte">
                 <h4>Posté le <?=$annonce['date']?> par <i><a href="mailto:<?=$userEmail?>" class="link-info"><?=$userEmail?></a></i></h4>
             </div>
             <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
-            <div>
+            <div class="button">
                 <br>
                 <a href="index.php?action=updateAnnonce&id=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
                 <a href="index.php?action=deleteAnnonce&id=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
             </div>
             <?php endif; ?>
         </div>
+        </div>
+    </div>
+    <div class="description">
+        <div class="texte">
+            <h4><strong>Description</strong></h4>
+            <h5><?=$annonce['annonceDescription']?></h5>
         </div>
     </div>
 </div>
