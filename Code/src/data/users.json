@@ -3,24 +3,28 @@
         "id": 0,
         "userName": "YFA",
         "userEmailAddress": "yann.fanha-dias@cpnv.ch",
-        "userHashPsw": "$2y$10$qM5loXeUJrkASDdxjDAyJeVMBjxNReYs17so03uRVhCkHwFY\/mhSe"
+        "userHashPsw": "$2y$10$qM5loXeUJrkASDdxjDAyJeVMBjxNReYs17so03uRVhCkHwFY\/mhSe",
+        "type_id": 2
     },
     {
         "id": 1,
         "userName": "SVY",
         "userEmailAddress": "sven.volery@cpnv.ch",
-        "userHashPsw": "$2y$10$ximINAsOeWVHtLs3NXcOXeFUbDw2MEfbYxWkwUT1a0n0PowhOIMte"
+        "userHashPsw": "$2y$10$ximINAsOeWVHtLs3NXcOXeFUbDw2MEfbYxWkwUT1a0n0PowhOIMte",
+        "type_id": 2
     },
     {
         "id": 2,
         "userName": "Tiago",
         "userEmailAddress": "tiago.santos@cpnv.ch",
-        "userHashPsw": "$2y$10$1LUez.V88Hd7oQwb5Tz1h.\/WMIpMZO8X0LpmJlX\/yRDx8KvSJhFKy"
+        "userHashPsw": "$2y$10$1LUez.V88Hd7oQwb5Tz1h.\/WMIpMZO8X0LpmJlX\/yRDx8KvSJhFKy",
+        "type_id": 2
     },
     {
         "id": 3,
         "userName": "User_3",
         "userEmailAddress": "user3@gmail.com",
-        "userHashPsw": "$2y$10$LCtfCK8nUvfFSSGwSq.Q9.bREQZmLVWdq64AoBN72ZfZ1UfskzYji"
+        "userHashPsw": "$2y$10$LCtfCK8nUvfFSSGwSq.Q9.bREQZmLVWdq64AoBN72ZfZ1UfskzYji",
+        "type_id": 1
     }
 ]
