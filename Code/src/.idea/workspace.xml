@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="" />
+    <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/annonces.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/annonces.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/img/annonces/1615464624.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/img/annonces/1615464629.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/affichageAnnonces.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/affichageAnnonces.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Volery-Sven/Castro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -48,7 +54,10 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="" />
@@ -62,11 +71,12 @@
       <workItem from="1615148031422" duration="305000" />
       <workItem from="1615232450221" duration="643000" />
       <workItem from="1615308191378" duration="15000" />
+      <workItem from="1615542987174" duration="3783000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -85,6 +95,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1615308205036" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1615543705843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615543705843" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
