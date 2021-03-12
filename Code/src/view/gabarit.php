@@ -46,15 +46,17 @@
         <div class="tm-nav">
             <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
                 <button
-                        class="navbar-toggler"
+                        class="navbar-toggler btn-primary"
                         type="button"
                         data-toggle="collapse"
                         data-target="#navbarNav"
                         aria-controls="navbarNav"
                         aria-expanded="false"
-                        aria-label="Toggle navigation">
+                        aria-label="Toggle navigation"
+                        id="btn_navbarToggler">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- List navbar---------------------------------------------------------------->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto mr-0" id="list_nav">
                         <li class="nav-item">
@@ -88,9 +90,9 @@
                                 <a class="nav-link" href="index.php?action=logout">Logout</a>
                             </li>
                         <?php endif; ?>
-
                     </ul>
                 </div>
+                <!-- END List navbar---------------------------------------------------------------->
             </nav>
         </div>
     </div>

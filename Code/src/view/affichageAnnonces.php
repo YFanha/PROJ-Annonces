@@ -14,6 +14,8 @@ require_once "model/annoncesManager.php";
 $annonces = getAnnonces();
 $nbAnnonce = intval(count($annonces));
 
+
+
 ob_start();
 ?>
 
@@ -27,12 +29,24 @@ ob_start();
     <div class="row" id="annonce-container">
         <div class="grid-container">
             <?php foreach ($annonces as $annonce) : ?>
-                <?php $annonceId = $annonce['id']?>
+
+                <?php
+                //Couper la descrition si elle est trop grand pou l'affichage des cartes des annonces (max 175 char)
+                define("MAX_DESCRIPTION_LENGTH", 100);
+
+                $annonceId = $annonce['id'];
+                if(strlen($annonce['annonceDescription']) > MAX_DESCRIPTION_LENGTH){
+                    $descAnnonce = substr($annonce['annonceDescription'], 0, MAX_DESCRIPTION_LENGTH) . "...";
+                } else {
+                    $descAnnonce = $annonce['annonceDescription'];
+                }
+                ?>
+
                 <div class="card" style="width: 18rem;">
                     <img src="<?=$annonce['annoncePhoto']?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?=$annonce['annonceTitle']?></h5>
-                        <p class="card-text"><?=$annonce['annonceDescription']?></p>
+                        <p class="card-text"><?=$descAnnonce?>
                         <p class="card-text">Type : <?=$annonce['annonceCategorie']?></p>
                         <a href="index.php?action=seeAnnonceDetails&id=<?=$annonceId?>" class="btn btn-primary btnAnnonce">Voir annonce</a>
                     </div>
