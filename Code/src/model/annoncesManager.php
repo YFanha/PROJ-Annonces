@@ -102,7 +102,7 @@ function getNewAnnonceId($annonces){
         $lastId = $annonces[$nbrAnnonces-1]['id'];
         $id = $lastId+1;
     }else{
-        $id = 0;
+        $id = 1;
     }
 
     return $id;
