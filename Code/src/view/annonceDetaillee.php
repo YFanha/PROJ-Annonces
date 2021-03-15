@@ -25,34 +25,22 @@ ob_start();
                     <h4><?=$annonce['annonceCategorie']?></h4>
                 </div>
                 <div class="texte">
-                    <h4><?=$annonce['annoncePrice']?> CHF</h4>
+                    <h4><?=$annonce['annoncePsrice']?> CHF</h4>
                 </div>
                 <div class="texte">
                     <h4>Posté le <?=$annonce['date']?> par <i><a href="mailto:<?=$userEmail?>" class="link-info"><?=$userEmail?></a></i></h4>
                 </div>
-                <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
+
                 <div class="button">
                     <br>
-                    <a href="index.php?action=editAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
-                    <a href="index.php?action=deleteAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
+                    <?php if (!isset($_SESSION['id']) || $_SESSION['id'] !== $annonce['user_id']) :?>
+                    <a href="index.php?action=contacter&annonceId=<?=$annonce['id']?>" class="btn btn-primary">Contacter</a>
+                    <?php elseif (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
+                        <a href="index.php?action=editAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
+                        <a href="index.php?action=deleteAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
+                    <?php endif; ?>
                 </div>
-                <?php endif; ?>
             </div>
-            <div class="texte">
-                <h4><?=$annonce['annoncePrice']?> CHF</h4>
-            </div>
-            <div class="texte">
-                <h4>Posté le <?=$annonce['date']?> par <i><a href="mailto:<?=$userEmail?>" class="link-info"><?=$userEmail?></a></i></h4>
-            </div>
-            <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
-            <div class="button">
-                <br>
-                <a href="index.php?action=contacter&id=<?=$annonce['id']?>" class="btn btn-primary">Contacter</a>
-                <a href="index.php?action=updateAnnonce&id=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
-                <a href="index.php?action=deleteAnnonce&id=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
-            </div>
-            <?php endif; ?>
-        </div>
         </div>
     </div>
     <div class="description">
