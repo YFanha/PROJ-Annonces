@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="" />
+    <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/annonces.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/annonces.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/affichageAnnonces.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/affichageAnnonces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/annonceDetaillee.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/annonceDetaillee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/content/Style/annonces.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/Style/annonces.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +54,10 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="" />
@@ -63,11 +72,12 @@
       <workItem from="1615232450221" duration="643000" />
       <workItem from="1615308191378" duration="15000" />
       <workItem from="1615504126236" duration="86000" />
+      <workItem from="1615792146883" duration="1379000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -86,22 +96,26 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1615308205036" />
-    <state width="1860" height="281" key="GridCell.Tab.0.bottom" timestamp="1615504212127">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="914" height="82" key="GridCell.Tab.0.bottom" timestamp="1615792710322">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1615504212127" />
-    <state width="1860" height="281" key="GridCell.Tab.0.center" timestamp="1615504212127">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="914" height="82" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1615792710322" />
+    <state width="914" height="82" key="GridCell.Tab.0.center" timestamp="1615792710322">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1615504212127" />
-    <state width="1860" height="281" key="GridCell.Tab.0.left" timestamp="1615504212127">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="914" height="82" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1615792710322" />
+    <state width="914" height="82" key="GridCell.Tab.0.left" timestamp="1615792710321">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1615504212127" />
-    <state width="1860" height="281" key="GridCell.Tab.0.right" timestamp="1615504212127">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="914" height="82" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1615792710321" />
+    <state width="914" height="82" key="GridCell.Tab.0.right" timestamp="1615792710322">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1615504212127" />
+    <state width="914" height="82" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1615792710322" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
