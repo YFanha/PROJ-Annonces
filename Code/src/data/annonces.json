@@ -1,12 +1,1 @@
-[
-    {
-        "id": 0,
-        "annonceTitle": "Exemple",
-        "annonceDescription": "desc",
-        "annonceCategorie": "Vente",
-        "annoncePrice": "19",
-        "date": "12.03.2021",
-        "user_id": 0,
-        "annoncePhoto": "data\\img\\annonces\\1615553746.jpg"
-    }
-]
+[]
