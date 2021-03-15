@@ -8,5 +8,35 @@
         "date": "12.03.2021",
         "user_id": 0,
         "annoncePhoto": "data\\img\\annonces\\1615553746.jpg"
+    },
+    {
+        "id": 1,
+        "annonceTitle": "Mercedes amg ",
+        "annonceDescription": "Driving Performance. Dynamique de marche maximale gr\u00e2ce aux g\u00e8nes typiquement AMG.\r\nMercedes-AMG ne se contente pas de d\u00e9velopper une voiture de sport. Nous prenons un engagement. Celui de toujours progresser afin de r\u00e9aliser tout ce qui est techniquement possible de mani\u00e8re inimitable. Pour donner naissance \u00e0 des v\u00e9hicules exceptionnels destin\u00e9s \u00e0 des personnes exceptionnelles. Bienvenue dans l\u2019univers de Mercedes-AMG.",
+        "annonceCategorie": "Vente",
+        "annoncePrice": "100000",
+        "date": "15.03.2021",
+        "user_id": 1,
+        "annoncePhoto": "data\\img\\annonces\\1615792337.jpg"
+    },
+    {
+        "id": 2,
+        "annonceTitle": "Ponpon",
+        "annonceDescription": "Driving Performance. Dynamique de marche maximale gr\u00e2ce aux g\u00e8nes typiquement AMG.\r\nMercedes-AMG ne se contente pas de d\u00e9velopper une voiture de sport. Nous prenons un engagement. Celui de toujours progresser afin de r\u00e9aliser tout ce qui est techniquement possible de mani\u00e8re inimitable. Pour donner naissance \u00e0 des v\u00e9hicules exceptionnels destin\u00e9s \u00e0 des personnes exceptionnelles. Bienvenue dans l\u2019univers de Mercedes-AMG.",
+        "annonceCategorie": "Location",
+        "annoncePrice": "25000",
+        "date": "15.03.2021",
+        "user_id": 1,
+        "annoncePhoto": "data\\img\\annonces\\1615792397.jpg"
+    },
+    {
+        "id": 3,
+        "annonceTitle": "Volery",
+        "annonceDescription": "Une description est le plus souvent un arr\u00eat dans le r\u00e9cit. Elle sert \u00e0 faire percevoir au lecteur le cadre ou des \u00e9l\u00e9ments du cadre dans lequel se d\u00e9roule une action. Une description peut faire comprendre : une situation historique, un milieu social, un paysage et son atmosph\u00e8re.",
+        "annonceCategorie": "Services",
+        "annoncePrice": "50000",
+        "date": "15.03.2021",
+        "user_id": 1,
+        "annoncePhoto": "data\\img\\annonces\\1615793817.jpg"
     }
 ]
