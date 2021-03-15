@@ -38,7 +38,7 @@
     <div class="col-lg-4 col-10">
         <div class="tm-brand-container">
             <div class="tm-brand-texts" id="div_title_nav">
-                <h1 class="text-uppercase" id="title_nav"><a href="https://github.com/YFanha">Web annonces</a></h1>
+                <h1 class="text-uppercase" id="title_nav"><a href="https://github.com/YFanha/PROJ-Annonces">Web annonces</a></h1>
             </div>
         </div>
     </div>
