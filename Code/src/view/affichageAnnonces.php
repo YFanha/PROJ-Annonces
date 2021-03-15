@@ -45,7 +45,7 @@ ob_start();
                 <div class="card" style="width: 18rem;">
                     <img src="<?=$annonce['annoncePhoto']?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"><?=$annonce['annonceTitle']?></h5>
+                        <h5 class="card-title"><strong><?=$annonce['annonceTitle']?></strong></h5>
                         <p class="card-text"><?=$descAnnonce?>
                         <p class="card-text">Type : <?=$annonce['annonceCategorie']?></p>
                         <a href="index.php?action=seeAnnonceDetails&annonceId=<?=$annonceId?>" class="btn btn-primary btnAnnonce">Voir annonce</a>

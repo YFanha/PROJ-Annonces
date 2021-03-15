@@ -14,7 +14,7 @@ ob_start();
 ?>
 <div class="container-fluid" id="mainContainerAnnonce">
     <div id="annonceContainer">
-        <img src="<?=$annonce['annoncePhoto']?>"id="img">
+        <img class="imgdetaille" src="<?=$annonce['annoncePhoto']?>"id="img">
 
         <div class="container" id="texteAnnonce">
             <div>
@@ -38,6 +38,21 @@ ob_start();
                 </div>
                 <?php endif; ?>
             </div>
+            <div class="texte">
+                <h4><?=$annonce['annoncePrice']?> CHF</h4>
+            </div>
+            <div class="texte">
+                <h4>Posté le <?=$annonce['date']?> par <i><a href="mailto:<?=$userEmail?>" class="link-info"><?=$userEmail?></a></i></h4>
+            </div>
+            <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
+            <div class="button">
+                <br>
+                <a href="index.php?action=contacter&id=<?=$annonce['id']?>" class="btn btn-primary">Contacter</a>
+                <a href="index.php?action=updateAnnonce&id=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
+                <a href="index.php?action=deleteAnnonce&id=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
+            </div>
+            <?php endif; ?>
+        </div>
         </div>
     </div>
     <div class="description">
