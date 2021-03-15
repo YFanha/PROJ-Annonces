@@ -35,10 +35,13 @@ if (isset($_GET['action'])) {
             displayAnnonces();
             break;
         case 'seeAnnonceDetails':
-            displayAnnonceDetails();
+            displayAnnonceDetails($_GET['annonceId']);
             break;
         case 'deleteAnnonce':
-            deleteAnnonce();
+            deleteAnnonce($_GET['annonceId']);
+            break;
+        case 'editAnnonce':
+            editAnnonce($_GET['annonceId'], $_POST);
             break;
         default :
             lost();

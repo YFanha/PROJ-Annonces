@@ -16,7 +16,7 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
         isset($newAnnonce['inputAnnoncePrice']) &&
         isset($newAnnonce['inputAnnonceDescription']) &&
         isset($newAnnonce['inputAnnonceCategorie']) &&
-        $pictureAnnonce['inputAnnoncePhoto']['error'] == 0 && $newAnnonce['inputAnnonceCategorie'] !== "choix"){
+        $pictureAnnonce['inputAnnoncePhoto']['error'] == 0 && $newAnnonce['inputAnnonceCategorie'] !== ""){
 
         $annonceTitle = $newAnnonce['inputAnnonceTitle'];
         $annoncePrice = $newAnnonce['inputAnnoncePrice'];
@@ -45,34 +45,59 @@ function displayAnnonces(){
     require "view/affichageAnnonces.php";
 }
 
-function displayAnnonceDetails(){
 /**
  * Appel de la page des details d'une annonces
  */
+function displayAnnonceDetails($annonceId){
     require "model/annoncesManager.php";
     require "model/usersManager.php";
 
-    $annonce = getAnnonceFromId($_GET['id']);
+    $annonce = getAnnonceFromId($annonceId);
 
     $user = getUserById($annonce['user_id']);
     $userEmail = $user['userEmailAddress'];
     require "view/annonceDetaillee.php";
 }
 
-function deleteAnnonce(){
 /*
  * Fonction pour supprimer les annonces grace a son index
  */
+function deleteAnnonce($annonceId){
     require_once "model/annoncesManager.php";
     $index = false;
 
-    $index = getAnnonceIndexFromId($_GET['id']);
+    $index = getAnnonceIndexFromId($annonceId);
 
     if ($index != false || $index == 0){
         removeAnnonce($index);
         require "view/affichageAnnonces.php";
     }else{
         $deleteAnnonceErrorMessage = "Echec de la suppression de l'annonce.";
+        require "view/affichageAnnonces.php";
+    }
+}
+
+
+function editAnnonce($annonceId, $newAnnonce){
+    require "model/annoncesManager.php";
+    if(isset($newAnnonce['inputAnnonceTitle']) &&
+        isset($newAnnonce['inputAnnoncePrice']) &&
+        isset($newAnnonce['inputAnnonceDescription']) &&
+        isset($newAnnonce['inputAnnonceCategorie']) &&
+        $newAnnonce['inputAnnonceCategorie'] !== "") {
+
+        $annonceTitle = $newAnnonce['inputAnnonceTitle'];
+        $annoncePrice = $newAnnonce['inputAnnoncePrice'];
+        $annonceDescription = $newAnnonce['inputAnnonceDescription'];
+        $annonceCategorie = $newAnnonce['inputAnnonceCategorie'];
+
+        editDataAnnonce($annonceId, $annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie);
+
+        require "view/affichageAnnonces.php";
+    }else{
+        $annonce = getAnnonceFromId($annonceId);
+
+        require "view/formAnnonce.php";
     }
 }
 

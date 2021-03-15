@@ -109,6 +109,17 @@ function removeAnnonce($index){
         return false;
     }
 
+function editDataAnnonce($annonceId, $annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie){
+    $annonceIndex = getAnnonceIndexFromId($annonceId);
+    $annonces = getAnnonces();
+
+    $annonces[$annonceIndex]['annonceTitle'] = $annonceTitle;
+    $annonces[$annonceIndex]['annonceDescription'] = $annonceDescription;
+    $annonces[$annonceIndex]['annonceCategorie'] = $annonceCategorie;
+    $annonces[$annonceIndex]['annoncePrice'] = $annoncePrice;
+    $annonces[$annonceIndex]['date'] = date("d.m.Y");
+
+    updateAnnonce($annonces);
 }
 
 ?>
