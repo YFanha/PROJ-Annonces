@@ -20,24 +20,24 @@ ob_start();
             <div>
                 <h1><strong><?=$annonce['annonceTitle']?></strong></h1>
             </div>
-        <div class="container" id="texte2Annonce">
-            <div class="texte">
-                <h4><?=$annonce['annonceCategorie']?></h4>
+            <div class="container" id="texte2Annonce">
+                <div class="texte">
+                    <h4><?=$annonce['annonceCategorie']?></h4>
+                </div>
+                <div class="texte">
+                    <h4><?=$annonce['annoncePrice']?> CHF</h4>
+                </div>
+                <div class="texte">
+                    <h4>Posté le <?=$annonce['date']?> par <i><a href="mailto:<?=$userEmail?>" class="link-info"><?=$userEmail?></a></i></h4>
+                </div>
+                <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
+                <div class="button">
+                    <br>
+                    <a href="index.php?action=editAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
+                    <a href="index.php?action=deleteAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
+                </div>
+                <?php endif; ?>
             </div>
-            <div class="texte">
-                <h4><?=$annonce['annoncePrice']?> CHF</h4>
-            </div>
-            <div class="texte">
-                <h4>Posté le <?=$annonce['date']?> par <i><a href="mailto:<?=$userEmail?>" class="link-info"><?=$userEmail?></a></i></h4>
-            </div>
-            <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
-            <div class="button">
-                <br>
-                <a href="index.php?action=updateAnnonce&id=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
-                <a href="index.php?action=deleteAnnonce&id=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
-            </div>
-            <?php endif; ?>
-        </div>
         </div>
     </div>
     <div class="description">
