@@ -9,6 +9,14 @@
 
 ob_start();
 $title = "Accueil";
+require_once "model/annoncesManager.php";
+
+$annonces = getAnnonces();
+$nbAnnonce = intval(count($annonces));
+
+
+
+ob_start();
 ?>
     <!--<section class="row tm-pt-4 tm-pb-6">
         <div class="col-12 tm-page-cols-container">
@@ -108,6 +116,7 @@ $title = "Accueil";
 <div class="bg-yellow" id="test">
     Bienvenu !
 </div>
+
 
 
 <?php
