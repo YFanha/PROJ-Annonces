@@ -14,7 +14,7 @@ ob_start();
 ?>
 <div class="container-fluid" id="mainContainerAnnonce">
     <div id="annonceContainer">
-        <img src="<?=$annonce['annoncePhoto']?>"id="img">
+        <img class="imgdetaille" src="<?=$annonce['annoncePhoto']?>"id="img">
 
         <div class="container" id="texteAnnonce">
             <div>
