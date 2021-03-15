@@ -33,6 +33,7 @@ ob_start();
             <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
             <div class="button">
                 <br>
+                <a href="index.php?action=contacter&id=<?=$annonce['id']?>" class="btn btn-primary">Contacter</a>
                 <a href="index.php?action=updateAnnonce&id=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
                 <a href="index.php?action=deleteAnnonce&id=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
             </div>
