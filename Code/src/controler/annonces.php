@@ -4,6 +4,12 @@
  * @description Fichier pour l'appelle des fonctions de modifications de données et vérification des données
  * @author Yann Fanha
  */
+
+/**
+ * Fonction qui recupere les valeurs du formulaire et les verifie pour ensuite les enregistrer dans le fichier json (fonction annexe)
+ * @param $newAnnonce
+ * @param $pictureAnnonce
+ */
 function registerAnnonces($newAnnonce, $pictureAnnonce){
 
     if(isset($newAnnonce['inputAnnonceTitle']) &&
@@ -32,11 +38,17 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
     }
 }
 
+/**
+ * Appel de la page des annonces
+ */
 function displayAnnonces(){
     require "view/affichageAnnonces.php";
 }
 
 function displayAnnonceDetails(){
+/**
+ * Appel de la page des details d'une annonces
+ */
     require "model/annoncesManager.php";
     require "model/usersManager.php";
 
@@ -48,6 +60,9 @@ function displayAnnonceDetails(){
 }
 
 function deleteAnnonce(){
+/*
+ * Fonction pour supprimer les annonces grace a son index
+ */
     require_once "model/annoncesManager.php";
     $index = false;
 
