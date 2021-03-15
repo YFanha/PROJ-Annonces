@@ -38,5 +38,15 @@
         "date": "15.03.2021",
         "user_id": 1,
         "annoncePhoto": "data\\img\\annonces\\1615793817.jpg"
+    },
+    {
+        "id": 4,
+        "annonceTitle": "Salut",
+        "annonceDescription": "Salut Test",
+        "annonceCategorie": "Location",
+        "annoncePrice": "1000",
+        "date": "15.03.2021",
+        "user_id": 2,
+        "annoncePhoto": "data\\img\\annonces\\1615799876.jpg"
     }
 ]
