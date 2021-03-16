@@ -25,7 +25,7 @@ ob_start();
                     <h4><?=$annonce['annonceCategorie']?></h4>
                 </div>
                 <div class="texte">
-                    <h4><?=$annonce['annoncePsrice']?> CHF</h4>
+                    <h4><?=$annonce['annoncePrice']?> CHF</h4>
                 </div>
                 <div class="texte">
                     <h4>Posté le <?=$annonce['date']?> par <i><a href="mailto:<?=$userEmail?>" class="link-info"><?=$userEmail?></a></i></h4>
