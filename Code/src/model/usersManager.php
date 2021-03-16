@@ -77,7 +77,7 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName)
     $userHashPsw = password_hash($userPsw, PASSWORD_DEFAULT);
     $userEmailAddress = strtolower($userEmailAddress);
 
-    //echo gettype($users);
+    $userType = 1; // 1 = client, 2 = Administrateurs
 
 
     $nbrUsers = count($users); //Variable pour définir le nombre d'utilisateurs inscrit
@@ -101,14 +101,14 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName)
         //attribuer un id
         $newID = getNewId($nbrUsers, $users);
 
-        $users[]=array('id'=>$newID, 'userName'=>$userName, 'userEmailAddress'=>$userEmailAddress,"userHashPsw"=>$userHashPsw);
+        $users[]=array('id'=>$newID, 'userName'=>$userName, 'userEmailAddress'=>$userEmailAddress,"userHashPsw"=>$userHashPsw, "userType"=>$userType);
 
 
         //réécrire le fichier des users
         updateUsers($users);
 
         return true;
-    } else if ($usrnameAlreadyUsed ||$emailAlreadyUsed){
+    } else if ($usrnameAlreadyUsed || $emailAlreadyUsed){
         return false;
     }
 
@@ -128,7 +128,7 @@ function getNewId($nbrUsers, $users){
             $lastID = $users[$nbrUsers-1]['id'];
             $id = $lastID + 1;
     } else {
-        $id = 0;
+        $id = 1;
     }
 
     return $id;

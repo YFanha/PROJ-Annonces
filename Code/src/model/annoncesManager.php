@@ -15,6 +15,10 @@ function getAnnonces(){
     return $annonce; //renvoi du tableau des annonces
 }
 
+/**
+ * @param $id : id de l'annonce voulu
+ * @return Annonce avec l'id correspond au parametre
+ */
 function getAnnonceFromId($id){
     $annonces = getAnnonces();
     for($index = 0; $index < count($annonces); $index++){
@@ -24,6 +28,10 @@ function getAnnonceFromId($id){
     }
 }
 
+/**
+ * @param $id : id de l'annonce voulu
+ * @return bool|int : index si il y'a une correspondance avec l'id, sinon il retourne faux
+ */
 function getAnnonceIndexFromId($id){
     $annonces = getAnnonces();
     for($index = 0; $index < count($annonces); $index++){
@@ -34,6 +42,9 @@ function getAnnonceIndexFromId($id){
     return false;
 }
 
+/*
+ * Fonction qui sert à réecrire le tableau des annonces dans le fichiers
+ */
 function updateAnnonce($annonces){
     $filename = "data/annonces.json";
     file_put_contents($filename, json_encode($annonces, JSON_PRETTY_PRINT));
@@ -80,6 +91,10 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
     return $result;
 }
 
+/**
+ * @param $annonces : Tableau des annonces
+ * @return int : retourne un ID non-utilisé pour la nouvelle annonce
+ */
 function getNewAnnonceId($annonces){
     $nbrAnnonces = count($annonces);
 
@@ -87,12 +102,16 @@ function getNewAnnonceId($annonces){
         $lastId = $annonces[$nbrAnnonces-1]['id'];
         $id = $lastId+1;
     }else{
-        $id = 0;
+        $id = 1;
     }
 
     return $id;
 }
 
+/**
+ * @param $index : index de l'annonce a supprimer
+ * @return bool si la suppresion a bien marché
+ */
 function removeAnnonce($index){
     $annonce = getAnnonces();
 
@@ -108,7 +127,20 @@ function removeAnnonce($index){
     }else{
         return false;
     }
-
 }
+
+function editDataAnnonce($annonceId, $annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie){
+    $annonceIndex = getAnnonceIndexFromId($annonceId);
+    $annonces = getAnnonces();
+
+    $annonces[$annonceIndex]['annonceTitle'] = $annonceTitle;
+    $annonces[$annonceIndex]['annonceDescription'] = $annonceDescription;
+    $annonces[$annonceIndex]['annonceCategorie'] = $annonceCategorie;
+    $annonces[$annonceIndex]['annoncePrice'] = $annoncePrice;
+    $annonces[$annonceIndex]['date'] = date("d.m.Y");
+
+    updateAnnonce($annonces);
+}
+
 
 ?>
