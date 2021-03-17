@@ -7,7 +7,6 @@
  * @version   13-APR-2020
  *****************************
  */
-
 session_start();
 require "controler/users.php";
 require "controler/navigation.php";

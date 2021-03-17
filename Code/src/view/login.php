@@ -16,6 +16,7 @@
 $title = 'Connectez-vous';
 
 ob_start();
+
 ?>
 
     <!-- Title Page -->
