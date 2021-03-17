@@ -63,8 +63,12 @@
     box-shadow: 0 1px 1px 1px rgb(168, 168, 168);
     margin: 9px;
     padding: 7px;
+    transition: transform .2s;
 }
 
+.card:hover{
+    transform: scale(1.03);
+}
 
 .btnAnnonce{
     width: 100%;
