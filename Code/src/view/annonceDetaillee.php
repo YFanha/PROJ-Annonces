@@ -34,7 +34,7 @@ ob_start();
                 <div class="button">
                     <br>
                     <?php if (!isset($_SESSION['id']) || $_SESSION['id'] !== $annonce['user_id']) :?>
-                    <a href="index.php?action=contacter&annonceId=<?=$annonce['id']?>" class="btn btn-primary">Contacter</a>
+                    <a href="index.php?action=contacterAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-primary">Contacter</a>
                     <?php elseif (isset($_SESSION['id']) && $_SESSION['id'] == $annonce['user_id']) :?>
                         <a href="index.php?action=editAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-warning">Modifier</a>
                         <a href="index.php?action=deleteAnnonce&annonceId=<?=$annonce['id']?>" class="btn btn-danger">Supprimer</a>
