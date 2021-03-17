@@ -101,4 +101,17 @@ function editAnnonce($annonceId, $newAnnonce){
     }
 }
 
+function contacterAnnonce($annonceId){
+    require "model/annoncesManager.php";
+
+    $annonce = getAnnonceFromId($annonceId);
+
+    require "view/formulaireContact.php";
+
+}
+
+
 ?>
+
+
+

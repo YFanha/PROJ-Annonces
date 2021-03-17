@@ -3,7 +3,7 @@
 
 
 
-<form action="" method="post">
+<form action="index.php?action=contacterAnnonces" method="post">
     <div>
         <label for="mail">Email</label>
         <input type="text" id="mail" name="mail">
