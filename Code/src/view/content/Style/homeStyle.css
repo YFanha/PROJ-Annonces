@@ -1,0 +1,14 @@
+.descriptionHome{
+    margin: 0 auto;
+    width:50%;
+    padding-top: 10px;
+    text-align: center;
+    font-family: Andale Mono, monospace;
+}
+
+.bienvenu{
+    margin: 0 auto;
+    width: 100px;
+    padding-top: 10px;
+    font-family: Impact, fantasy;
+}
