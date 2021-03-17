@@ -1,12 +1,14 @@
 <?php
+
+$title = 'Connectez-vous';
+
+ob_start();
 ?>
-
-
 
 <form action="index.php?action=contacterAnnonces" method="post">
     <div>
         <label for="mail">Email</label>
-        <input type="text" id="mail" name="mail">
+        <input type="text" id="mail" name="mail" value="<?=$user['userEmailAddress']?>" readonly>
     </div>
     <div>
         <label for="titreAnnonce">Titre Annonce</label>
@@ -25,3 +27,8 @@
         <textarea id="msg" name="message"></textarea>
     </div>
 </form>
+
+<?php
+$content = ob_get_clean();
+require 'gabarit.php';
+?>

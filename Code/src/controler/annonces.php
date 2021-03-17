@@ -103,11 +103,14 @@ function editAnnonce($annonceId, $newAnnonce){
 
 function contacterAnnonce($annonceId){
     require "model/annoncesManager.php";
-
+    require "model/usersManager.php";
     $annonce = getAnnonceFromId($annonceId);
 
-    require "view/formulaireContact.php";
+    $user_id = $annonce['user_id'];
 
+    $user = getUserById($user_id);
+
+    require "view/formulaireContact.php";
 }
 
 
