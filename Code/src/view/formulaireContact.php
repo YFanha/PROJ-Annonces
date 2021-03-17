@@ -12,15 +12,15 @@ ob_start();
     </div>
     <div>
         <label for="titreAnnonce">Titre Annonce</label>
-        <input type="text" id="titreAnnonce" name="titreAnnonce">
+        <input type="text" id="titreAnnonce" name="titreAnnonce" value="<?=$annonce['annonceTitle'?>" readonly>
     </div>
     <div>
         <label for="descriptionAnnonce">Description Annonce</label>
-        <input type="text" id="descriptionAnnonce" name="descriptionAnnonce">
+        <input type="text" id="descriptionAnnonce" name="descriptionAnnonce" value="<?=$annonce['annonceDescription'?>" readonly>
     </div>
     <div>
         <label for="prixAnnonce">Prix Annonce</label>
-        <input type="text" id="prixAnnonce" name="prixAnnonce">
+        <input type="text" id="prixAnnonce" name="prixAnnonce" value="<?=$annonce['annoncePrice'?>" readonly>
     </div>
     <div>
         <label for="msg">Message :</label>
