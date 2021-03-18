@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Jardinage"
+    },
+    {
+        "id": 2,
+        "name": "Nettoyage"
+    },
+    {
+        "id": 3,
+        "name": "Babysitting"
+    },
+    {
+        "id": 4,
+        "name": "Cours"
+    },
+    {
+        "id": 5,
+        "name": "Esthetique"
+    },
+    {
+        "id": 6,
+        "name": "Gardiennage"
+    }
+]
