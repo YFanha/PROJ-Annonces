@@ -16,7 +16,7 @@ ob_start();
     </div>
     <div>
         <label for="descriptionAnnonce">Description Annonce</label>
-        <input type="text" id="descriptionAnnonce" name="descriptionAnnonce" value="<?=$annonce['annonceDescription']?>" readonly>
+        <textarea id="descriptionAnnonce" name="descriptionAnnonce" readonly><?=$annonce['annonceDescription']?></textarea>
     </div>
     <div>
         <label for="prixAnnonce">Prix Annonce</label>
