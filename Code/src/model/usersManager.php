@@ -39,6 +39,7 @@ function updateUsers($users){
 }
 
 /**
+ * @description : Fonction pour verifier si l'email et les mots de passe correspondent bien
  * @param $userEmailAddress : user's email
  * @param $userPsw user's password
  * @return bool
@@ -70,22 +71,28 @@ function isLoginCorrect($userEmailAddress, $userPsw)
 function registerNewAccount($userEmailAddress, $userPsw, $userName)
 {
     $result = false;
-    //lire le fichier des users
 
+    //lire le fichier des users
     $users=getUsers();
+
     //Hash du mot de passe
     $userHashPsw = password_hash($userPsw, PASSWORD_DEFAULT);
+
+    //mettre l'email en minuscule
     $userEmailAddress = strtolower($userEmailAddress);
 
+    //Déclarer type de compte qu'on crée
     $userType = 1; // 1 = client, 2 = Administrateurs
 
+    //nombre d'utilisateur déjà inscrit
+    $nbrUsers = count($users);
 
-    $nbrUsers = count($users); //Variable pour définir le nombre d'utilisateurs inscrit
 
+    //Verifier si le compte n'existe pas encore
     $emailAlreadyUsed = false; //valeur par défaut = faux (n'existe pas encore)
     $usrnameAlreadyUsed = false; //Valeur par défaut = false (n'existe pas)
 
-    if($nbrUsers !== 0){ //Si il y'a des utilisateurs déjà inscrit
+    if($nbrUsers !== 0){
         for($i = 0; $i < $nbrUsers; $i++){
             if($userEmailAddress == $users[$i]['userEmailAddress']){
                 $emailAlreadyUsed = true;
@@ -161,3 +168,4 @@ function getUserId($email){
         }
     }
 }
+?>
