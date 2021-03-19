@@ -125,7 +125,7 @@ $nbAnnonce = intval(count($annonces));
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100 " src="data/img/annonces/1615792337.jpg" alt="First slide">
+            <img class="d-block w-100" src="data/img/annonces/1615792337.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="data/img/annonces/1615799876.jpg" alt="Second slide">
