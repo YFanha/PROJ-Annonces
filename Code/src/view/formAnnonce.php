@@ -8,8 +8,12 @@
 
 $title = 'Créer votre annonce';
 
+require "model/annoncesManager.php";
 
 $categories = array("Vente", "Location", "Services");
+
+//recuperer les services
+$services = getServices();
 
 
 ob_start();
@@ -33,11 +37,20 @@ ob_start();
             <textarea id="description" class="form-control sizefull" name="inputAnnonceDescription" placeholder="Description" required><?=$annonce['annonceDescription']?></textarea>
         </div>
         <div class="form form-group">
-            <select name="inputAnnonceCategorie" id="categorie" class="form-control sizefull" >
+            <select name="inputAnnonceCategorie" id="categorie" class="form-control sizefull">
                 <option value="">Choisissiez une catégorie</option>
                 <?php foreach ($categories as $categorie) :?>
                 <option value="<?=$categorie?>" <?php if ($categorie === $annonce['annonceCategorie']) : ?> selected <?php endif;?>> <?=$categorie?></option>
                 <?php endforeach;?>
+            </select>
+        </div>
+
+        <div class="form form-group">
+            <select name="inputAnnonceService" id="selectService" class="form-control sizefull hide">
+                <option value="">Type de service</option>
+                <?php foreach ($services as $service) :?>
+                <option value="<?=$service['id']?>"><?=$service['name']?></option>
+                <?php endforeach; ?>
             </select>
         </div>
 
@@ -59,5 +72,3 @@ ob_start();
 $content = ob_get_clean();
 require 'gabarit.php';
 ?>
-
-

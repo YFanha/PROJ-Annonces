@@ -116,3 +116,6 @@
     border-color: darkgrey;
 }
 
+.hide{
+    display: none;
+}

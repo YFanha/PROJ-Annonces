@@ -113,4 +113,5 @@
 <script src="view/content/js/jquery.min.js"></script>
 <script src="view/content/js/parallax.min.js"></script>
 <script src="view/content/js/bootstrap.min.js"></script>
+<script src="view/content/javaScript/formAnnonce.js"></script>
 </html>
