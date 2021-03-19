@@ -26,5 +26,12 @@
         "userEmailAddress": "user3@gmail.com",
         "userHashPsw": "$2y$10$LCtfCK8nUvfFSSGwSq.Q9.bREQZmLVWdq64AoBN72ZfZ1UfskzYji",
         "type_id": 1
+    },
+    {
+        "id": 4,
+        "userName": "EFA",
+        "userEmailAddress": "evanne@gmail.com",
+        "userHashPsw": "$2y$10$8IzDNfOYZkMOqcr8d0c.weQImwAtdX.DkDApdE.zgm1SLhCGYSy\/6",
+        "userType": 1
     }
 ]
