@@ -11,6 +11,7 @@
  * @param $pictureAnnonce
  */
 function registerAnnonces($newAnnonce, $pictureAnnonce){
+    require "model/annoncesManager.php";
 
     if(isset($newAnnonce['inputAnnonceTitle']) &&
         isset($newAnnonce['inputAnnoncePrice']) &&
@@ -25,7 +26,7 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
         $annoncePhoto = $pictureAnnonce['inputAnnoncePhoto'];
 
 
-        require "model/annoncesManager.php";
+
         $registerResult = registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto);
         if ($registerResult){
             require "view/affichageAnnonces.php";
@@ -34,6 +35,8 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
             $registerAnnonceErrorMessage = "Echec de l'enregistrement de l'annonce.";
         }
     } else {
+        //recuperer les services
+        $services = getServices();
         require "view/formAnnonce.php";
     }
 }

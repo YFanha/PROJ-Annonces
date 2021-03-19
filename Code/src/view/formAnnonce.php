@@ -8,15 +8,12 @@
 
 $title = 'Créer votre annonce';
 
-require "model/annoncesManager.php";
-
 $categories = array("Vente", "Location", "Services");
 
-//recuperer les services
-$services = getServices();
 
 
 ob_start();
+
 ?>
 <?php if ($registerErrorMessage != null) : ?>
     <h5><span style="color:red"><?= $registerErrorMessage; ?></span></h5>
