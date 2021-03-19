@@ -154,4 +154,14 @@ function editDataAnnonce($annonceId, $annonceTitle, $annoncePrice, $annonceDescr
 
     updateAnnonce($annonces);
 }
+
+/**
+ * @description : fonction qui récupere les valeur dans le fichier
+ * @return mixed
+ */
+function getServices(){
+    $filename = "data/services.json";
+    $services = json_decode(file_get_contents($filename),true);
+    return $services;
+}
 ?>
