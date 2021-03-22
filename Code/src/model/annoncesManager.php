@@ -79,7 +79,7 @@ function updateAnnonce($annonces){
  * @param $annoncePhoto => associative tab ('name', 'tmp_name', 'type' .. and others)
  * @return bool
  */
-function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto){
+function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto, $annonceService){
     $result = false;
 
     $annonces = getAnnonces();
@@ -101,7 +101,12 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
         //get the user id
         $user_id = $_SESSION['id'];
 
-        $annonces[] = array('id'=>$id, 'annonceTitle'=>$annonceTitle, 'annonceDescription'=>$annonceDescription, 'annonceCategorie'=>$annonceCategorie, 'annoncePrice'=>$annoncePrice, 'date'=>$date, 'user_id'=>$user_id, 'annoncePhoto'=>$newFile);
+        //Verifier la valeur des service
+        if($annonceService === ""){
+            $annonceService = "-";
+        }
+
+        $annonces[] = array('id'=>$id, 'annonceTitle'=>$annonceTitle, 'annonceDescription'=>$annonceDescription, 'annonceCategorie'=>$annonceCategorie, 'service_id'=>$annonceService, 'annoncePrice'=>$annoncePrice, 'date'=>$date, 'user_id'=>$user_id, 'annoncePhoto'=>$newFile);
 
         updateAnnonce($annonces);
 
@@ -142,17 +147,24 @@ function removeAnnonce($index){
  * @param $annonceDescription : Description de l'annonce
  * @param $annonceCategorie : Catégorie de l'annonce
  */
-function editDataAnnonce($annonceId, $annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie){
+function editDataAnnonce($annonceId, $annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annonceServiceType){
     $annonceIndex = getAnnonceIndexFromId($annonceId);
     $annonces = getAnnonces();
+
+    //Verifier la valeur des service
+    if($annonceServiceType === ""){
+        $annonceServiceType = "-";
+    }
 
     $annonces[$annonceIndex]['annonceTitle'] = $annonceTitle;
     $annonces[$annonceIndex]['annonceDescription'] = $annonceDescription;
     $annonces[$annonceIndex]['annonceCategorie'] = $annonceCategorie;
     $annonces[$annonceIndex]['annoncePrice'] = $annoncePrice;
     $annonces[$annonceIndex]['date'] = date("d.m.Y");
+    $annonces[$annonceIndex]['service_id'] = $annonceServiceType;
 
     updateAnnonce($annonces);
+
 }
 
 /**
@@ -164,4 +176,5 @@ function getServices(){
     $services = json_decode(file_get_contents($filename),true);
     return $services;
 }
+
 ?>

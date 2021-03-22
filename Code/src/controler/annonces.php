@@ -24,16 +24,31 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
         $annonceDescription = $newAnnonce['inputAnnonceDescription'];
         $annonceCategorie = $newAnnonce['inputAnnonceCategorie'];
         $annoncePhoto = $pictureAnnonce['inputAnnoncePhoto'];
+        $annonceServiceType = $newAnnonce['inputAnnonceService'];
 
-
-
-        $registerResult = registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto);
-        if ($registerResult){
-            require "view/affichageAnnonces.php";
+        //Verifier les valeur de categorie et de type de service pour etre sur qu'une valeur a été choisie.
+        if(($annonceCategorie === "Services" && $annonceServiceType !== "") || ($annonceCategorie !== "Services")){
+            $verifAnnonceServiceValue = true;
         }else{
-            require "view/formAnnonce.php";
-            $registerAnnonceErrorMessage = "Echec de l'enregistrement de l'annonce.";
+            $verifAnnonceServiceValue = false;
         }
+
+
+        if($verifAnnonceServiceValue){
+            $registerResult = registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto, $annonceServiceType);
+            //Verification si l'annonce a bien été enregistrée
+            if ($registerResult){
+                require "view/affichageAnnonces.php";
+            }else{
+                require "view/formAnnonce.php";
+                $registerErrorMessage = "Echec de l'enregistrement, vérifiez que tous les champs on été rempli.";
+            }
+        }else{
+            $registerErrorMessage = "Echec de l'enregistrement, vérifiez que tous les champs on été rempli.";
+            $services = getServices();
+            require "view/formAnnonce.php";
+        }
+
     } else {
         //recuperer les services
         $services = getServices();
@@ -58,6 +73,8 @@ function displayAnnonceDetails($annonceId){
     $annonce = getAnnonceFromId($annonceId);
 
     $user = getUserById($annonce['user_id']);
+    $services = getServices();
+
     $userEmail = $user['userEmailAddress'];
     require "view/annonceDetaillee.php";
 }
@@ -93,16 +110,32 @@ function editAnnonce($annonceId, $newAnnonce){
         $annoncePrice = $newAnnonce['inputAnnoncePrice'];
         $annonceDescription = $newAnnonce['inputAnnonceDescription'];
         $annonceCategorie = $newAnnonce['inputAnnonceCategorie'];
+        $annonceService = $newAnnonce['inputAnnonceService'];
 
-        editDataAnnonce($annonceId, $annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie);
+
+        //Verifier les valeur de categorie et de type de service pour etre sur qu'une valeur a été choisie.
+        if(($annonceCategorie === "Services" && $annonceService !== "") || ($annonceCategorie !== "Services")){
+            $verifAnnonceServiceValue = true;
+        }else{
+            $verifAnnonceServiceValue = false;
+        }
+
+        if($verifAnnonceServiceValue){
+            editDataAnnonce($annonceId, $annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annonceService);
+        }else{
+            $registerErrorMessage = "Echec de la modification. Vérifiez les valeurs entrées.";
+            require "view/formAnnonce.php";
+        }
+
 
         require "view/affichageAnnonces.php";
     }else{
         $annonce = getAnnonceFromId($annonceId);
-
+        $services = getServices();
         require "view/formAnnonce.php";
     }
 }
+
 
 function contacterAnnonce($annonceId){
     require "model/annoncesManager.php";

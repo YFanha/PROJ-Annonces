@@ -4,6 +4,7 @@
  * @brief     This file is the rooter managing the link with controllers.
  * @author    Created by Pascal.BENZONANA
  * @author    Updated by Nicolas.GLASSEY
+ * @author    Updated by Yann.FANHA
  * @version   13-APR-2020
  *****************************
  */
