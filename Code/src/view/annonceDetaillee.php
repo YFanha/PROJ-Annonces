@@ -22,7 +22,13 @@ ob_start();
             </div>
             <div class="container" id="texte2Annonce">
                 <div class="texte">
-                    <h4><?=$annonce['annonceCategorie']?></h4>
+                    <h4><?=$annonce['annonceCategorie']?>
+                        <?php if (is_numeric($annonce['service_id'])) {
+                            //Recuperer la valeur de service grace a l'id
+                            $indexService = array_search($annonce['service_id'], array_column($services, 'id'));
+                            echo "- ". $services[$indexService]['name'];
+                        }?>
+                    </h4>
                 </div>
                 <div class="texte">
                     <h4><?=$annonce['annoncePrice']?> CHF</h4>
