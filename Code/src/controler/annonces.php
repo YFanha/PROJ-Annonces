@@ -116,7 +116,6 @@ function contacterAnnonce($annonceId){
     require "view/formulaireContact.php";
 }
 
-
 ?>
 
 
