@@ -12,3 +12,9 @@
     padding-top: 10px;
     font-family: Impact, fantasy;
 }
+
+.img_carousel{
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
