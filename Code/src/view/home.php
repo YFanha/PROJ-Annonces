@@ -109,11 +109,11 @@ $nbAnnonce = intval(count($annonces));
             </div>
         </div>
     </section>-->
-<div class="bienvenu" id="test">
-    <h1>Bienvenu</h1>
+<div class="bienvenu">
+    <h1>Bienvenue</h1>
 </div>
 
-<div class="descriptionHome" id="test">
+<div class="descriptionHome">
     Nous travaillons sur un projet dans le cadre du CPNV. Nous devons réaliser un site web permettant à des membre authentifié de publier des annonces pour vendre des articles, mettre en location, ou proposer des services, avec comme "base de données" des fichiers JSON.
 </div>
 
