@@ -8,6 +8,8 @@
  * @version   13-APR-2020
 */
 
+use PHPMailer\PHPMailer\PHPMailer;
+
 
 /**
  * @brief This function is designed to create a new user session
@@ -118,14 +120,17 @@ function sendEmail($message){
     require_once "PHPMailer/PHPMailer.php";
     require_once "PHPMailer/SMTP.php";
     require_once "PHPMailer/Exception.php";
+    require_once "PHPMailer/PHPMailerAutoload.php";
 
-    $username = "yann.fanha-dias@cpnv.ch";
+    $emailTo = "yannfnha@gmail.com";
+    $emailSender = "yann7fanha@gmail.com";
+    $password = "YannDF1501";
     $email = $_SESSION['userEmailAddress'];
-    $subject = "annonce title"; /****************/
-    $body = ""; /******************************/
-    $host = "smtp.gmail.com";
-    $port = 465;
-    $SMTPSecure = "ssl";
+    $subject = $message['titreAnnonce'];
+    $body = $message['message'];
+    $host = "smtp.google.com";
+    $port = 587 ;
+    $SMTPSecure = "tls";
 
 
     $mail = new PHPMailer();
@@ -134,15 +139,21 @@ function sendEmail($message){
     $mail->isSMTP();
     $mail->Host = $host;
     $mail->SMTPAuth = true;
-    $mail->Username = $username;
     $mail->Port = $port;
     $mail->SMTPSecure = $SMTPSecure;
+    $mail->Mailer = "smtp";
 
-    //email setting
+    $mail->Username = $emailSender;
+    $mail->Password = $password;
+
+
+    //email setting<
     $mail->isHTML(true);
-    $mail->setFrom($email);
-    $mail->Subject = ("$email ($subject)");
-    $mail->Body = $body;
+    $mail->setFrom($email, "Test user");
+    $mail->addReplyTo("yann.fanha-dias@cpnv.ch");
+    $mail->addAddress($emailTo, "recever");
+    $mail->Subject ="$email ($subject)";
+    $mail->Body = "test";
 
     if($mail->send()){
         $status  = "succes";
