@@ -46,6 +46,9 @@ if (isset($_GET['action'])) {
         case 'contacterAnnonce':
             contacterAnnonce($_GET['annonceId']);
             break;
+        case 'sendEmail':
+            sendEmail($_POST);
+            break;
         default :
             lost();
     }
