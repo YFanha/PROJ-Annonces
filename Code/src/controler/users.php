@@ -122,15 +122,15 @@ function sendEmail($message){
     require_once "PHPMailer/Exception.php";
     require_once "PHPMailer/PHPMailerAutoload.php";
 
-    $emailTo = "yannfnha@gmail.com";
-    $emailSender = "yann7fanha@gmail.com";
-    $password = "YannDF1501";
+    $emailTo = "yann.fanha-dias@cpnv.ch";
+    $emailSender = "yann.fanha-dias@cpnv.ch";
+    $password = "Evanne2009";
     $email = $_SESSION['userEmailAddress'];
     $subject = $message['titreAnnonce'];
     $body = $message['message'];
-    $host = "smtp.google.com";
-    $port = 587 ;
-    $SMTPSecure = "tls";
+    $host = "mail.cpnv.ch";
+    $port = 465 ;
+    $SMTPSecure = "ssl";
 
 
     $mail = new PHPMailer();
