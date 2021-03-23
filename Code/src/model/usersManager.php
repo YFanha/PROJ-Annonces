@@ -168,4 +168,12 @@ function getUserId($email){
         }
     }
 }
+
+function getUserType($id){
+    $users = getUsers();
+    $label = 'id';
+    $index = array_search($id, array_column($users, $label));
+
+    return $users[$index]['type_id'];
+}
 ?>
