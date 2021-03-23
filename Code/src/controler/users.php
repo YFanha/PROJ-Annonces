@@ -17,9 +17,11 @@ function createSession($userEmailAddress)
 {
     //Get ID of the user
     $id = getUserId($userEmailAddress);
+    $userType = getUserType($id);
 
     $_SESSION['userEmailAddress'] = $userEmailAddress;
     $_SESSION['id'] = $id;
+    $_SESSION['userType'] = $userType;
 }
 
 /**
@@ -42,7 +44,7 @@ function login($loginRequest)
             if (isLoginCorrect($userEmailAddress, $userPsw)) {
                 $loginErrorMessage = null;
                 createSession($userEmailAddress);
-                require "view/home.php";
+                home();
             } else { //if the user/psw does not match, login form appears again with an error message
                 $loginErrorMessage = "L'adresse email et/ou le mot de passe ne correspondent pas !";
                 require "view/login.php";
@@ -64,7 +66,7 @@ function logout()
 {
     $_SESSION = array();
     session_destroy();
-    require "view/home.php";
+    home();
 }
 
 /**
@@ -92,7 +94,7 @@ function register($registerRequest)
                 if ($registerResult) {
                     createSession($userEmailAddress);
                     $registerErrorMessage = null;
-                    require "view/home.php";
+                    home();
                 } else if (!$registerResult) {
                     $registerErrorMessage = "Le nom d'utilisateur est déjà utilisé.";
                     require "view/register.php";
@@ -109,4 +111,46 @@ function register($registerRequest)
         $registerErrorMessage = "Nous rencontrons actuellement un problème technique. Il est temporairement impossible de s'enregistrer. Désolé du dérangement !";
         require "view/register.php";
     }
+}
+
+
+function sendEmail($message){
+    require_once "PHPMailer/PHPMailer.php";
+    require_once "PHPMailer/SMTP.php";
+    require_once "PHPMailer/Exception.php";
+
+    $username = "yann.fanha-dias@cpnv.ch";
+    $email = $_SESSION['userEmailAddress'];
+    $subject = "annonce title"; /****************/
+    $body = ""; /******************************/
+    $host = "smtp.gmail.com";
+    $port = 465;
+    $SMTPSecure = "ssl";
+
+
+    $mail = new PHPMailer();
+
+    //STMP setting
+    $mail->isSMTP();
+    $mail->Host = $host;
+    $mail->SMTPAuth = true;
+    $mail->Username = $username;
+    $mail->Port = $port;
+    $mail->SMTPSecure = $SMTPSecure;
+
+    //email setting
+    $mail->isHTML(true);
+    $mail->setFrom($email);
+    $mail->Subject = ("$email ($subject)");
+    $mail->Body = $body;
+
+    if($mail->send()){
+        $status  = "succes";
+        $response = "Email sent!";
+    }else{
+        $status = "failed";
+        $response = "there is a problem : <br>" . $mail->ErrorInfo;
+    }
+
+    exit(json_encode(array("status" => $status, "response" => $response)));
 }
