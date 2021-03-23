@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="view/content/Style/annonces.css" />
     <link rel="stylesheet" href="view/content/Style/homeStyle.css" />
 
+    <!-- Ion-Icons -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
 </head>
 
 <body>
@@ -73,7 +76,7 @@
                         <?php if (isset($_SESSION['userEmailAddress']) && isset($_SESSION['id'])) :?>
                         <li class="nav-item">
                             <div class="tm-nav-link-highlight"></div>
-                            <a class="nav-link" href="index.php?action=addAnnonces">Ajouter une annonces</a>
+                            <a class="nav-link" href="index.php?action=addAnnonces"><ion-icon name="add-circle-outline"></ion-icon></a> <!----------------------->
                         </li>
                         <?php endif;?>
                         <?php if (!isset($_SESSION['userEmailAddress']) || ((@$_GET['action'] == "logout"))) : ?>
