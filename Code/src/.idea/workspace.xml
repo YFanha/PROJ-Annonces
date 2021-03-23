@@ -20,18 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PHPMailer/PHPMailerAutoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PHPMailer/class.phpmailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PHPMailer/class.smtp.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHPMailer/Exception.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHPMailer/OAuth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHPMailer/PHPMailer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHPMailer/POP3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHPMailer/SMTP.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/controler/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/formulaireContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/formulaireContact.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +120,9 @@
       <workItem from="1616505892741" duration="5319000" />
       <workItem from="1616519377468" duration="3079000" />
       <workItem from="1616523235090" duration="3396000" />
+      <workItem from="1616528208055" duration="205000" />
+      <workItem from="1616528465198" duration="73000" />
+      <workItem from="1616528729502" duration="393000" />
     </task>
     <servers />
   </component>
