@@ -11,7 +11,7 @@ ob_start();
     </h4>
     <div class="form form-group">
         <label for="mail">Email</label>
-        <input class="form-control sizefull" type="text" id="mail" name="mail" value="<?=$user['userEmailAddress']?>" readonly>
+        <input class="form-control sizefull" type="text" id="mail" name="emailTo" value="<?=$user['userEmailAddress']?>" readonly>
     </div>
     <div class="form form-group">
         <label for="titreAnnonce">Titre Annonce</label>

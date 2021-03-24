@@ -117,43 +117,49 @@ function register($registerRequest)
 
 
 function sendEmail($message){
-    require_once "PHPMailer/PHPMailer.php";
-    require_once "PHPMailer/SMTP.php";
-    require_once "PHPMailer/Exception.php";
+
+
     require_once "PHPMailer/PHPMailerAutoload.php";
 
-    $emailTo = "yann.fanha-dias@cpnv.ch";
-    $emailSender = "yann.fanha-dias@cpnv.ch";
-    $password = "Evanne2009";
-    $email = $_SESSION['userEmailAddress'];
-    $subject = $message['titreAnnonce'];
-    $body = $message['message'];
-    $host = "mail.cpnv.ch";
-    $port = 465 ;
-    $SMTPSecure = "ssl";
+    require_once "PHPMailer/src/PHPMailer.php";
+    require_once "PHPMailer/src/SMTP.php";
+    require_once "PHPMailer/src/Exception.php";
 
+    //compte qui envoi le message
+    $emailDenvoi = "webannonce.cpnv@outlook.com";
+    $password = "WebAnnonceCPNV2021";
+    //SRV
+    $host = "SMTP.office365.com";
+    $port = 587 ;
+    $SMTPSecure = "starttls";
+
+
+    //msg
+    $emailFrom = $_SESSION['userEmailAddress']; //Celui qui envoi le message
+    $subject = $message['titreAnnonce']; //L'objet du mail
+    $body = $message['message']; // le message
+
+    //Le destinataire
+    $emailTo = $message['emailTo'];
 
     $mail = new PHPMailer();
 
-    //STMP setting
     $mail->isSMTP();
+    $mail->CharSet = 'UTF-8';
     $mail->Host = $host;
     $mail->SMTPAuth = true;
-    $mail->Port = $port;
-    $mail->SMTPSecure = $SMTPSecure;
-    $mail->Mailer = "smtp";
-
-    $mail->Username = $emailSender;
+    $mail->Username = $emailDenvoi;
     $mail->Password = $password;
+    $mail->Port = 587;
+    $mail->SMTPSecure = $SMTPSecure;
 
+    $mail->From = $emailDenvoi;
+    $mail->FromName= "Web Annonce";
+    $mail->addReplyTo($emailFrom);
 
-    //email setting<
-    $mail->isHTML(true);
-    $mail->setFrom($email, "Test user");
-    $mail->addReplyTo("yann.fanha-dias@cpnv.ch");
-    $mail->addAddress($emailTo, "recever");
-    $mail->Subject ="$email ($subject)";
-    $mail->Body = "test";
+    $mail->addAddress($emailTo);
+    $mail->Subject = "$emailFrom -> ($subject)";
+    $mail->Body = $body;
 
     if($mail->send()){
         $status  = "succes";
@@ -164,4 +170,5 @@ function sendEmail($message){
     }
 
     exit(json_encode(array("status" => $status, "response" => $response)));
+
 }
