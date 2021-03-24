@@ -8,9 +8,10 @@
 
 .bienvenu{
     margin: 0 auto;
-    width: 100px;
+    width: 300px;
     padding-top: 10px;
     font-family: Impact, fantasy;
+    text-align: center;
 }
 
 .img_carousel{
