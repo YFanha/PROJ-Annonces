@@ -5,7 +5,7 @@
  * @author    Created by Pascal.BENZONANA
  * @author    Updated by Nicolas.GLASSEY
  * @author    Updated by Yann.FANHA
- * @version   13-APR-2020
+ * @version   24.03.2021
  *****************************
  */
 session_start();

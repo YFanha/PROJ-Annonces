@@ -136,7 +136,10 @@ function editAnnonce($annonceId, $newAnnonce){
     }
 }
 
-
+/**
+ * @brief Fonction qui appelle le formulaire pour le contacte des annonces avec l'annonce spécifique et l'utilisateur qui a posté l'annonce
+ * @param $annonceId
+ */
 function contacterAnnonce($annonceId){
     require "model/annoncesManager.php";
     require "model/usersManager.php";

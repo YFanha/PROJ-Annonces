@@ -116,6 +116,11 @@ function register($registerRequest)
 }
 
 
+/**
+ * @brief Fonction qui envoye un mail à la personne qui a posté l'annonce
+ * @param $message
+ * @throws \PHPMailer\PHPMailer\Exception
+ */
 function sendEmail($message){
 
 
@@ -172,3 +177,5 @@ function sendEmail($message){
     exit(json_encode(array("status" => $status, "response" => $response)));
 
 }
+
+?>
