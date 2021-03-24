@@ -115,17 +115,13 @@ function register($registerRequest)
     }
 }
 
-
 /**
  * @brief Fonction qui envoye un mail à la personne qui a posté l'annonce
  * @param $message
  * @throws \PHPMailer\PHPMailer\Exception
  */
 function sendEmail($message){
-
-
     require_once "PHPMailer/PHPMailerAutoload.php";
-
     require_once "PHPMailer/src/PHPMailer.php";
     require_once "PHPMailer/src/SMTP.php";
     require_once "PHPMailer/src/Exception.php";
@@ -167,14 +163,12 @@ function sendEmail($message){
     $mail->Body = $body;
 
     if($mail->send()){
-        $status  = "succes";
-        $response = "Email sent!";
+        require "view/affichageAnnonces.php";
     }else{
-        $status = "failed";
-        $response = "there is a problem : <br>" . $mail->ErrorInfo;
+        $contactError = "Un problème est survenu, réessayez plus tard";
+        contacterAnnonce($message['annonce_id']);
     }
 
-    exit(json_encode(array("status" => $status, "response" => $response)));
 
 }
 
