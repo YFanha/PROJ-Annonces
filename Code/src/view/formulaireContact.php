@@ -5,7 +5,10 @@ $title = 'Connectez-vous';
 ob_start();
 ?>
 
-<form action="index.php?action=sendEmail" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" method="post">
+<?php if ($contactError != null) : ?>
+    <h5><span style="color:red"><?= $contactError; ?></span></h5>
+<?php endif ?>
+
 <form action="index.php?action=sendEmail" id="contactForm" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" method="post">
     <h4 class="titre-form">
         Envoyer un mail pour l'annonce <?=$annonce['annonceTitle']?>
@@ -26,6 +29,9 @@ ob_start();
         <label for="prixAnnonce">Prix Annonce</label>
         <input class="form-control sizefull" type="text" id="prixAnnonce" name="prixAnnonce" value="<?=$annonce['annoncePrice']?> CHF " readonly>
     </div>-->
+    <div>
+        <input class="hide" name="annonce_id" value="<?=$annonceId?>">
+    </div>
     <div class="form form-group">
         <label for="msg">Message :</label>
         <textarea class="form-control sizefull" id="msg" name="message"></textarea>
