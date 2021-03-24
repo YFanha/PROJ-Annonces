@@ -97,7 +97,6 @@ function deleteAnnonce($annonceId){
     }
 }
 
-
 /**
  * @brief Fonction pour modifier une annonce
  * @param $annonceId
@@ -146,15 +145,21 @@ function editAnnonce($annonceId, $newAnnonce){
  * @param $annonceId
  */
 function contacterAnnonce($annonceId){
-    require "model/annoncesManager.php";
-    require "model/usersManager.php";
-    $annonce = getAnnonceFromId($annonceId);
+    if(isset($_SESSION['userEmailAddress']) && isset($_SESSION['id']) && isset($_SESSION['userType'])){
+        require "model/annoncesManager.php";
+        require "model/usersManager.php";
+        $annonce = getAnnonceFromId($annonceId);
 
-    $user_id = $annonce['user_id'];
+        $user_id = $annonce['user_id'];
 
-    $user = getUserById($user_id);
+        $user = getUserById($user_id);
 
-    require "view/formulaireContact.php";
+        require "view/formulaireContact.php";
+    }else{
+        $loginErrorMessage = "Veuillez vous connecter.";
+        require "view/login.php";
+    }
+
 }
 
 ?>
