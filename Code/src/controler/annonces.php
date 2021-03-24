@@ -98,6 +98,11 @@ function deleteAnnonce($annonceId){
 }
 
 
+/**
+ * @brief Fonction pour modifier une annonce
+ * @param $annonceId
+ * @param $newAnnonce
+ */
 function editAnnonce($annonceId, $newAnnonce){
     require "model/annoncesManager.php";
     if(isset($newAnnonce['inputAnnonceTitle']) &&
