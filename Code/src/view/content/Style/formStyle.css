@@ -119,3 +119,9 @@
 .hide{
     display: none;
 }
+
+/********* contact form ****/
+#contactForm{
+    display: block;
+    margin: 5% auto 10% auto;
+}

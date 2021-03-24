@@ -6,6 +6,7 @@ ob_start();
 ?>
 
 <form action="index.php?action=sendEmail" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" method="post">
+<form action="index.php?action=sendEmail" id="contactForm" class="col-12 col-sm-9 col-md-6 col-lg-5 col-xl-4 border bg-light shadow-sm" method="post">
     <h4 class="titre-form">
         Envoyer un mail pour l'annonce <?=$annonce['annonceTitle']?>
     </h4>
