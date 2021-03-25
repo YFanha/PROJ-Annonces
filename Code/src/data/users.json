@@ -33,5 +33,12 @@
         "userEmailAddress": "evanne@gmail.com",
         "userHashPsw": "$2y$10$8IzDNfOYZkMOqcr8d0c.weQImwAtdX.DkDApdE.zgm1SLhCGYSy\/6",
         "userType": 1
+    },
+    {
+        "id": 5,
+        "userName": "LCZ",
+        "userEmailAddress": "luke.cornaz@cpnv.ch",
+        "userHashPsw": "$2y$10$IK8k8clUzd6rxRdqCe7d2uXMk2spPw2jyG8eofJiM7BTEXGXdQEPW",
+        "userType": 1
     }
 ]
