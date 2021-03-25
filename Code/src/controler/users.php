@@ -10,7 +10,6 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-
 /**
  * @brief This function is designed to create a new user session
  * @param $userEmailAddress : user unique id, must be meet RFC 5321/5322
@@ -46,7 +45,7 @@ function login($loginRequest)
             if (isLoginCorrect($userEmailAddress, $userPsw)) {
                 $loginErrorMessage = null;
                 createSession($userEmailAddress);
-                home();
+                displayAnnonces();
             } else { //if the user/psw does not match, login form appears again with an error message
                 $loginErrorMessage = "L'adresse email et/ou le mot de passe ne correspondent pas !";
                 require "view/login.php";
