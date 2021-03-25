@@ -76,30 +76,25 @@
 
 
 /* ------- Annonces détaillée ---------*/
-
-#img{
-    width: 600px;
+#titleAnnonceDetails{
+    color: var(--webAnnonce_Blue);
 }
 
-#imgAnnonce{
-    /* margin-left: 300px;
-     float:left;
-     width:150px;*/
-    background-color: blueviolet;
-    padding: 0;
+#img_annonceDetails{
+    /*height: 100%;
+    width: auto;*/
+    width: 100%;
+    height: auto;
+    margin: 0 0 15px 0;
+    box-shadow: 0 0 5px 2px rgb(168, 168, 168);
 }
 
 #mainContainerAnnonce{
-    height: 700px;
-    display: block;
+    height: min-content;
+    margin-bottom: 10px;
+    /*display: block;*/
     border: solid 1px darkgrey;
-    padding: 50px;
-}
-
-
-#annonceContainer{
-    display: flex;
-    flex-direction: row;
+    padding: 30px;
 }
 
 #texte2Annonce{
@@ -107,19 +102,11 @@
 }
 
 .description{
+    border-top: 5px var(--webAnnonce_Blue) double;
     display: flex;
     padding-top: 20px;
     margin-top: 30px;
 }
-
-
-/* ------- annonces detaillée ---------*/
-
-.imgdetaille{
-    max-width: 250px;
-    height: auto;
-}
-
 
 
 

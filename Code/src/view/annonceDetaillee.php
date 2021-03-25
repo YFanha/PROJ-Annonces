@@ -13,15 +13,16 @@ $title = $annonce['annonceTitle'];
 ob_start();
 ?>
 <div class="container-fluid" id="mainContainerAnnonce">
-    <div id="annonceContainer">
-        <img class="imgdetaille" src="<?=$annonce['annoncePhoto']?>"id="img">
-
-        <div class="container" id="texteAnnonce">
+    <div id="annonceContainer row">
+        <div class="div_img col-12 col-sm-12 col-mg-12 col-lg-12 col-xl-12">
+            <img src="<?=$annonce['annoncePhoto']?>" id="img_annonceDetails">
+        </div>
+        <div class="container col-12 col-sm-12 col-mg-12 col-lg-12 col-xl-12" id="texteAnnonce"">
             <div>
-                <h1><strong><?=$annonce['annonceTitle']?></strong></h1>
+                <h1 id="titleAnnonceDetails"><strong><?=$annonce['annonceTitle']?></strong></h1>
             </div>
-            <div class="container" id="texte2Annonce">
-                <div class="texte">
+            <div id="texte2Annonce">
+                <div id="texte_detaille">
                     <h4><?=$annonce['annonceCategorie']?>
                         <?php if (is_numeric($annonce['service_id'])) {
                             //Recuperer la valeur de service grace a l'id
@@ -49,8 +50,8 @@ ob_start();
             </div>
         </div>
     </div>
-    <div class="description">
-        <div class="texte">
+    <div class="description row">
+        <div class="texte col-12 col-sm-12 col-mg-12 col-lg-12 col-xl-12">
             <h4><strong>Description</strong></h4>
             <h5><?=$annonce['annonceDescription']?></h5>
         </div>
