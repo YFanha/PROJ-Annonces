@@ -23,24 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d28cd3d1-e8e1-4891-bf7d-7e4c43fa2bf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/img/default_img/babysitting.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/img/default_img/cours.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/img/default_img/esthetique.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/img/default_img/gardiennage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/img/default_img/jardinage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/img/default_img/nettoyage.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controler/annonces.php" beforeDir="false" afterPath="$PROJECT_DIR$/controler/annonces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/annonces.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/annonces.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/img/Services/babySitting.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/img/Services/cours.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/img/Services/esthétique.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/img/Services/gardiennage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/img/Services/jardinage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/img/Services/nettoyage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/annoncesManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/annoncesManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/content/javaScript/formAnnonce.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/content/javaScript/formAnnonce.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/formAnnonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/formAnnonce.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +154,7 @@
       <workItem from="1616753135361" duration="1805000" />
       <workItem from="1616755081531" duration="1423000" />
       <workItem from="1616756539809" duration="37000" />
+      <workItem from="1616756810732" duration="1040000" />
     </task>
     <servers />
   </component>
