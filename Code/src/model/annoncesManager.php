@@ -79,7 +79,7 @@ function updateAnnonce($annonces){
  * @param $annoncePhoto => associative tab ('name', 'tmp_name', 'type' .. and others)
  * @return bool
  */
-function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto, $annonceService){
+function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annonceServiceType, $annoncePhoto){
     $result = false;
 
     $annonces = getAnnonces();
@@ -88,32 +88,64 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
 
 
     //-----------modify name to avoid to have to same file name--------------
-    $path = "data\img\annonces\\";
-    //get the extension
-    $extensionFile = "." . pathinfo($annoncePhoto['name'], PATHINFO_EXTENSION);
+    //Verifier si il y'a bien un fichier
+    if($annoncePhoto['error'] == 4){
+            $path = "data/img/default_img/";
 
-    $newFilename = strval(time()) . $extensionFile;
-    $newFile = $path . $newFilename;
+            switch ($annonceServiceType){
+                case 1:
+                    $img = "jardinage";
+                    break;
+                case 2:
+                    $img = "nettoyage";
+                    break;
+                case 3:
+                    $img = "babysitting";
+                    break;
+                case 4:
+                    $img = "cours";
+                    break;
+                case 5:
+                    $img = "esthetique";
+                    break;
+                case 6:
+                    $img = "gardiennage";
+                    break;
+                default:
+                    $img = "default";
+                    break;
+            }
+            $img .= ".jpg";
 
+            $fullPathImg = $path . $img;
 
-    //move the files into the dir
-    if(move_uploaded_file($annoncePhoto['tmp_name'], $newFile)){
-        //get the user id
-        $user_id = $_SESSION['id'];
+            $newFile = $fullPathImg;
 
-        //Verifier la valeur des service
-        if($annonceService === ""){
-            $annonceService = "-";
-        }
-
-        $annonces[] = array('id'=>$id, 'annonceTitle'=>$annonceTitle, 'annonceDescription'=>$annonceDescription, 'annonceCategorie'=>$annonceCategorie, 'service_id'=>$annonceService, 'annoncePrice'=>$annoncePrice, 'date'=>$date, 'user_id'=>$user_id, 'annoncePhoto'=>$newFile);
-
-        updateAnnonce($annonces);
-
-        $result = true;
     } else {
-        $result = false;
+        $path = "data\img\annonces\\";
+        //get the extension
+        $extensionFile = "." . pathinfo($annoncePhoto['name'], PATHINFO_EXTENSION);
+
+        $newFilename = strval(time()) . $extensionFile;
+        $newFile = $path . $newFilename;
+        //move the files into the dir
+        move_uploaded_file($annoncePhoto['tmp_name'], $newFile);
     }
+
+
+    //get the user id
+    $user_id = $_SESSION['id'];
+
+    //Verifier la valeur des service
+    if($annonceServiceType === ""){
+        $annonceServiceType = "-";
+    }
+
+    $annonces[] = array('id'=>$id, 'annonceTitle'=>$annonceTitle, 'annonceDescription'=>$annonceDescription, 'annonceCategorie'=>$annonceCategorie, 'service_id'=>$annonceServiceType, 'annoncePrice'=>$annoncePrice, 'date'=>$date, 'user_id'=>$user_id, 'annoncePhoto'=>$newFile);
+
+    updateAnnonce($annonces);
+
+    $result = true;
     return $result;
 }
 

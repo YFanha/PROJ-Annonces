@@ -53,7 +53,7 @@ ob_start();
 
         <?php if (!$_GET['annonceId']): ?>
         <div class="col text-center">
-            <input name="inputAnnoncePhoto" type="file" accept=".png, .jpg, .jpeg" size="20" required">
+            <input name="inputAnnoncePhoto" id="annonceImg" type="file" accept=".png, .jpg, .jpeg" size="20">
         </div>
         <?php endif; ?>
 

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const selectCategorie = document.getElementById("categorie"); //Liste déroulante des catégories
     const selectServices =  document.getElementById("selectService"); //Liste déroulante des services
+    const inputImg = document.getElementById("annonceImg"); //Image de l'annonce
 
     //Constante pour definir la valeur "Services" de la categorie
     const SERVICES = "Services"
@@ -21,9 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (selectCategorieValue === SERVICES){
             selectServices.classList.remove(HIDDEN);
+            inputImg.required = false;
         }else{
             selectServices.classList.add(HIDDEN);
             selectServices.options[selectServices.selectedIndex].value = "";
+            inputImg.required = true;
 
             console.log(selectServices.options[selectServices.selectedIndex].value);
         }

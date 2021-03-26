@@ -16,8 +16,7 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
     if(isset($newAnnonce['inputAnnonceTitle']) &&
         isset($newAnnonce['inputAnnoncePrice']) &&
         isset($newAnnonce['inputAnnonceDescription']) &&
-        isset($newAnnonce['inputAnnonceCategorie']) &&
-        $pictureAnnonce['inputAnnoncePhoto']['error'] == 0 && $newAnnonce['inputAnnonceCategorie'] !== ""){
+        isset($newAnnonce['inputAnnonceCategorie']) &&$newAnnonce['inputAnnonceCategorie'] !== ""){
 
         $annonceTitle = $newAnnonce['inputAnnonceTitle'];
         $annoncePrice = $newAnnonce['inputAnnoncePrice'];
@@ -33,18 +32,18 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
             $verifAnnonceServiceValue = false;
         }
 
-
         if($verifAnnonceServiceValue){
-            $registerResult = registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annoncePhoto, $annonceServiceType);
+            $registerResult = registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $annonceCategorie, $annonceServiceType, $annoncePhoto);
             //Verification si l'annonce a bien été enregistrée
             if ($registerResult){
                 require "view/affichageAnnonces.php";
             }else{
-                require "view/formAnnonce.php";
+                $services = getServices();
                 $registerErrorMessage = "Echec de l'enregistrement, vérifiez que tous les champs on été rempli.";
+                require "view/formAnnonce.php";
             }
         }else{
-            $registerErrorMessage = "Echec de l'enregistrement, vérifiez que tous les champs on été rempli.";
+            $registerErrorMessage = "Echec de l'enregistrement, vérifiez que le champ des catégorie ET des services ont été rempli.";
             $services = getServices();
             require "view/formAnnonce.php";
         }
