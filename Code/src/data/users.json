@@ -32,13 +32,20 @@
         "userName": "EFA",
         "userEmailAddress": "evanne@gmail.com",
         "userHashPsw": "$2y$10$8IzDNfOYZkMOqcr8d0c.weQImwAtdX.DkDApdE.zgm1SLhCGYSy\/6",
-        "userType": 1
+        "type_id": 1
     },
     {
         "id": 5,
         "userName": "LCZ",
         "userEmailAddress": "luke.cornaz@cpnv.ch",
         "userHashPsw": "$2y$10$IK8k8clUzd6rxRdqCe7d2uXMk2spPw2jyG8eofJiM7BTEXGXdQEPW",
-        "userType": 1
+        "type_id": 1
+    },
+    {
+        "id": 6,
+        "userName": "test1",
+        "userEmailAddress": "test1@test.ch",
+        "userHashPsw": "$2y$10$G4wC3YrIgOA49BeRm5omwO0V4GVWAJMUW4nu0FZxSxroZtCI7U27S",
+        "type_id": 1
     }
 ]
