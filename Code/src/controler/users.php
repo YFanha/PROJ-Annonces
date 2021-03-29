@@ -126,8 +126,8 @@ function sendEmail($message){
     require_once "PHPMailer/src/Exception.php";
 
     //compte qui envoi le message
-    $emailDenvoi = "webannonce.cpnv@outlook.com";
-    $password = "WebAnnonceCPNV2021";
+    $emailDenvoi = "cpnv.webannonce2021@outlook.com";
+    $password = "nffPBj3JsRqw5xi";
     //SRV
     $host = "SMTP.office365.com";
     $port = 587 ;
@@ -164,7 +164,7 @@ function sendEmail($message){
     if($mail->send()){
         require "view/affichageAnnonces.php";
     }else{
-        $contactError = "Un problème est survenu, réessayez plus tard";
+        $contactError = "Un problème est survenu, contactez <a href='mailto:Yann.FANHA-DIAS@cpnv.ch'>Yann.FANHA-DIAS@cpnv.ch</a> ou réessayez plus tard.";
         contacterAnnonce($message['annonce_id']);
     }
 
