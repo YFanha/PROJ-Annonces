@@ -148,7 +148,6 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
 
     updateAnnonce($annonces);
 
-    $result = true;
     return $result;
 }
 
@@ -160,8 +159,20 @@ function registerNewAnnonce($annonceTitle, $annoncePrice, $annonceDescription, $
 function removeAnnonce($index){
     $annonces = getAnnonces();
 
-    //delete img
-    unlink($annonces[$index]['annoncePhoto']);
+    $imagesGeneriques = scandir(PATH_IMG_GEN);
+    $img_generique = false;
+
+    for($i = 0; $i < count($imagesGeneriques); $i++){
+        $pathImgAnnonce =  PATH_IMG_GEN . $imagesGeneriques[$i];
+        if($pathImgAnnonce === $annonces[$index]['annoncePhoto']){
+            $img_generique = true;
+        }
+    }
+
+    if(!$img_generique){
+        //delete img
+        unlink($annonces[$index]['annoncePhoto']);
+    }
 
     unset($annonces[$index]);
     $annonces = array_values($annonces);
