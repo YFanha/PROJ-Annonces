@@ -47,5 +47,12 @@
         "userEmailAddress": "test1@test.ch",
         "userHashPsw": "$2y$10$G4wC3YrIgOA49BeRm5omwO0V4GVWAJMUW4nu0FZxSxroZtCI7U27S",
         "type_id": 1
+    },
+    {
+        "id": 7,
+        "userName": "test_sven",
+        "userEmailAddress": "test_sven@cpnv.ch",
+        "userHashPsw": "$2y$10$76TxsDiRIwNA0Tc.3omoIujOpcO7vPHRl2QW1lQc6puV2eWb4Gflu",
+        "userType": 1
     }
 ]
