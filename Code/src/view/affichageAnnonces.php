@@ -14,6 +14,7 @@ require_once "model/annoncesManager.php";
 $annonces = getAnnonces();
 $nbAnnonce = intval(count($annonces));
 
+define("MAX_DESCRIPTION_LENGTH", 100);
 
 
 ob_start();
@@ -32,7 +33,7 @@ ob_start();
 
                 <?php
                 //Couper la descrition si elle est trop grand pou l'affichage des cartes des annonces (max 175 char)
-                define("MAX_DESCRIPTION_LENGTH", 100);
+
 
                 $annonceId = $annonce['id'];
                 if(strlen($annonce['annonceDescription']) > MAX_DESCRIPTION_LENGTH){
