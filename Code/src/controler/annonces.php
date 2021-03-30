@@ -59,12 +59,6 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
  * Appel de la page des annonces
  */
 function displayAnnonces(){
-    require_once "model/annoncesManager.php";
-
-    $annonces = getAnnonces();
-
-    $nbAnnonce = intval(count($annonces));
-
     require "view/affichageAnnonces.php";
 }
 

@@ -9,6 +9,11 @@
 
 $title = 'Annonces';
 
+require_once "model/annoncesManager.php";
+
+$annonces = getAnnonces();
+
+$nbAnnonce = intval(count($annonces));
 ob_start();
 ?>
 
