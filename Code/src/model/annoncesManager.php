@@ -5,8 +5,6 @@
  * @author Yann Fanha & Tiago Santos
  */
 
-define("PATH_IMG_GEN", "data/img/default_img/"); //chemin pour le dossier des images générique
-define("PATH_IMG", "data\img\annonces\\"); //Chemin pour le dossier des images des annonces
 
 /**
  * @description : Récupere toutes les annonces

@@ -9,14 +9,6 @@
 
 $title = 'Annonces';
 
-require_once "model/annoncesManager.php";
-
-$annonces = getAnnonces();
-$nbAnnonce = intval(count($annonces));
-
-define("MAX_DESCRIPTION_LENGTH", 100);
-
-
 ob_start();
 ?>
 

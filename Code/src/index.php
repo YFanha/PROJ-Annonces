@@ -13,6 +13,15 @@ require "controler/users.php";
 require "controler/navigation.php";
 require "controler/annonces.php";
 
+//************** Déclaration de CONSTANTE **************
+//Définir le type de compte
+
+define("PATH_IMG_GEN", "data/img/default_img/"); //chemin pour le dossier des images générique
+define("PATH_IMG", "data\img\annonces\\"); //Chemin pour le dossier des images des annonces
+
+define("MAX_DESCRIPTION_LENGTH", 100); //Nombre de caractère max pour l'affichage des descriptions
+
+
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {

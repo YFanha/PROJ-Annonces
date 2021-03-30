@@ -82,7 +82,7 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName)
     $userEmailAddress = strtolower($userEmailAddress);
 
     //Déclarer type de compte qu'on crée
-    $userType = 1; // 1 = client, 2 = Administrateurs
+    $userType = TYPE_CLIENT;
 
     //nombre d'utilisateur déjà inscrit
     $nbrUsers = count($users);

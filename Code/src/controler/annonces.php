@@ -59,6 +59,12 @@ function registerAnnonces($newAnnonce, $pictureAnnonce){
  * Appel de la page des annonces
  */
 function displayAnnonces(){
+    require_once "model/annoncesManager.php";
+
+    $annonces = getAnnonces();
+
+    $nbAnnonce = intval(count($annonces));
+
     require "view/affichageAnnonces.php";
 }
 
@@ -78,8 +84,8 @@ function displayAnnonceDetails($annonceId){
     require "view/annonceDetaillee.php";
 }
 
-/*
- * Fonction pour supprimer les annonces grace a son index
+/**
+ * @brief Fonction pour supprimer les annonces grace a son index
  */
 function deleteAnnonce($annonceId){
     require_once "model/annoncesManager.php";
