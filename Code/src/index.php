@@ -15,6 +15,8 @@ require "controler/annonces.php";
 
 //************** Déclaration de CONSTANTE **************
 //Définir le type de compte
+define("TYPE_ADMIN", 2);
+define("TYPE_CLIENT", 1);
 
 define("PATH_IMG_GEN", "data/img/default_img/"); //chemin pour le dossier des images générique
 define("PATH_IMG", "data\img\annonces\\"); //Chemin pour le dossier des images des annonces
