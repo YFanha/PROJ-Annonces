@@ -169,6 +169,11 @@ function getUserId($email){
     }
 }
 
+/**
+ * @brief Fonction pour récuper le type d'un utilisateur depuis son id
+ * @param $id
+ * @return mixed
+ */
 function getUserType($id){
     $users = getUsers();
     $label = 'id';
