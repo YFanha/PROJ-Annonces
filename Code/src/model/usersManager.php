@@ -108,7 +108,7 @@ function registerNewAccount($userEmailAddress, $userPsw, $userName)
         //attribuer un id
         $newID = getNewId($nbrUsers, $users);
 
-        $users[]=array('id'=>$newID, 'userName'=>$userName, 'userEmailAddress'=>$userEmailAddress,"userHashPsw"=>$userHashPsw, "userType"=>$userType);
+        $users[]=array('id'=>$newID, 'userName'=>$userName, 'userEmailAddress'=>$userEmailAddress,"userHashPsw"=>$userHashPsw, "type_id"=>$userType);
 
 
         //réécrire le fichier des users
