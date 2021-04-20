@@ -41,7 +41,7 @@ ob_start();
         </div>
 
         <div>
-                <span class="form-legend-text">Pas encore incris ? <a href="register.php">Inscrivez-vous ici!</a><span>
+                <span class="form-legend-text">Pas encore incris ? <a href="index.php?action=register">Inscrivez-vous ici!</a><span>
         </div>
     </form>
 
