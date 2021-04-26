@@ -40,5 +40,12 @@
         "userEmailAddress": "simon.cuany@cpnv.ch",
         "userHashPsw": "$2y$10$iH\/wh4QQd6\/APa1Ysw.uBetP.VRNag6K\/Zl1u0NuMAY1u40D3QOTW",
         "type_id": 1
+    },
+    {
+        "id": 7,
+        "userName": "test",
+        "userEmailAddress": "test@cpnv.ch",
+        "userHashPsw": "$2y$10$ZP8l1ZyYozw\/ABYxPn1tMO94duIFMzMQskrKBvcAHQTlzDDlrl0cq",
+        "type_id": 1
     }
 ]
